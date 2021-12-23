@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#111111" />
     <!-- <link rel="stylesheet" href="css/adv.css" /> -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- подключение favicon -->
     <link
@@ -37,6 +38,74 @@
     </nav>
   </div>
 </header>
+ <div class="main-slider">
+  <aside class="slider-aside">
+  <div class="slider-aside__content">
+    <p class="slider-aside__text"><span>design & archtecture solution</span></p>
+    <div class="slider-aside__divider"></div>
+    <ul class="socail slider-aside__list">
+      <li class="social__item slider-aside__item">
+        <a href="#" class="social__link">
+          <svg class="social__icon" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#viber"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item slider-aside__item">
+        <a href="#" class="social__link">
+          <svg class="social__icon" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item slider-aside__item">
+        <a href="#" class="social__link">
+          <svg class="social__icon" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+  <div class="swiper-wrapper">
+    <div
+      class="swiper-slide main-slider__slide"
+      style="background-image: url(images/portfolio/slide-1.jpg)"
+    >
+      <div class="container main-slider__container">
+        <h2 class="heading main-slider__head">
+          <span>Design</span> solutions <br/ >for home
+          <span>&amp;</span> busines<span>.</span>
+        </h2>
+      </div>
+    </div>
+    <!-- slide -->
+    <div
+      class="swiper-slide main-slider__slide"
+      style="background-image: url(images/bg/about-bg.jpg)"
+    >
+      <div class="container main-slider__container">
+        <h2 class="heading main-slider__head">
+          <span>Proiectare</span> și realizare<br/ >
+          <span>design</span> interior<span>.</span>
+        </h2>
+      </div>
+    </div>
+    <!-- slide -->
+  </div>
+  <div class="main-slider__btn main-slider__btn-prev">
+    <svg class="main-slider__btn-fill" aria-hidden="true">
+      <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+    </svg>
+  </div>
+  <div class="main-slider__btn main-slider__btn-next">
+    <svg class="main-slider__btn-fill" aria-hidden="true">
+      <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+    </svg>
+  </div>
+</div>
 
       <main class="main"></main>
       <footer class="footer">
@@ -47,6 +116,7 @@
 
     <!-- подключение скриптов -->
     <!-- <script src="js/adv.min.js"></script> -->
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

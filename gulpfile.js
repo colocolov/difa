@@ -141,11 +141,13 @@ function cssBuild() {
 
 // копирование доп. стилей из src в готовый проект
 function cssAdd() {
-  return src(path.src.cssadd)
-    .pipe(concat("adv.css"))
-    .pipe(dest(path.build.css))
-    .pipe(cleancss())
-    .pipe(dest(path.build.css));
+  return (
+    src(path.src.cssadd)
+      // .pipe(concat("adv.css"))
+      // .pipe(dest(path.build.css))
+      // .pipe(cleancss())
+      .pipe(dest(path.build.css))
+  );
 }
 
 function js() {
@@ -170,11 +172,13 @@ function jsBuild() {
 
 // копирование дополнительных JS фалйов из src в готовый проект
 function jsAdd() {
-  return src(path.src.jsadd)
-    .pipe(concat("adv.min.js"))
-    .pipe(uglify())
-    .pipe(dest(path.build.js))
-    .pipe(browsersync.stream());
+  return (
+    src(path.src.jsadd)
+      // .pipe(concat("adv.min.js"))
+      // .pipe(uglify())
+      .pipe(dest(path.build.js))
+      .pipe(browsersync.stream())
+  );
 }
 
 //--- конвертирование JPG в WEBP + копирование JPG в dist
