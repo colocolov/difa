@@ -1,17 +1,17 @@
 // accordeon
-document.addEventListener("DOMContentLoaded", () => {
-  const accordeons = document.querySelectorAll(".accordeon__item");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const accordeons = document.querySelectorAll(".accordeon__item");
 
-  accordeons.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      const self = e.currentTarget;
-      const title = self.querySelector(".accordeon__name");
-      const content = self.querySelector(".accordeon__decription");
+//   accordeons.forEach((el) => {
+//     el.addEventListener("click", (e) => {
+//       const self = e.currentTarget;
+//       const title = self.querySelector(".accordeon__name");
+//       const content = self.querySelector(".accordeon__decription");
 
-      self.classList.toggle("active");
-    });
-  });
-});
+//       self.classList.toggle("active");
+//     });
+//   });
+// });
 // ----- END
 
 // слайдер на главной
@@ -64,20 +64,39 @@ const headerSlider = new Swiper(".main-slider", {
 });
 //----- END
 
-// слайдер отзывов
-var reviewsSlider = new Swiper(".reviews__sliders", {
+// слайдер на главной
+const miniSlider = new Swiper(".mini-slider", {
   loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  speed: 800,
   navigation: {
-    nextEl: ".reviews-button--right",
-    prevEl: ".reviews-button--left",
+    nextEl: ".mini-slider__btn-next",
+    prevEl: ".mini-slider__btn-prev",
     clickable: true,
   },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "bullets",
-    clickable: true,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
   },
 });
+//----- END
+
+// слайдер отзывов
+// var reviewsSlider = new Swiper(".reviews__sliders", {
+//   loop: true,
+//   navigation: {
+//     nextEl: ".reviews-button--right",
+//     prevEl: ".reviews-button--left",
+//     clickable: true,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     type: "bullets",
+//     clickable: true,
+//   },
+// });
 //----- END
 
 //# sourceMappingURL=main.js.map
