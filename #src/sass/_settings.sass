@@ -51,6 +51,29 @@ input
   background-color: transparent
   cursor: pointer
 
+.button
+  position: relative
+  font-family: 'Gilroy', sans-serif
+  font-weight: 800
+  font-size: 30px
+  line-height: 160%
+  letter-spacing: 0.03em
+  color: #000000
+  background-color: $orange
+  border-radius: 100px
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    right: 50px
+    transform: translateY(-33%)
+    width: 24px
+    height: 24px
+    background-image: url(../images/icons/sprite.svg#arrow-btn)
+    background-position: 0 0
+    background-repeat: no-repeat
+    transition: right 0.3s linear
+
 .unvisible
   position: absolute
   left: -3000px

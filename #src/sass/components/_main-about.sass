@@ -1,0 +1,96 @@
+.main-about
+  position: relative
+  padding-top: 124px
+  padding-bottom: 233px
+  background-color: $bgc
+  background-image: url(../images/bg/about-bg.jpg)
+  background-position: center bottom
+  background-repeat: no-repeat
+  background-size: contain
+  &__head
+    margin-bottom: 36px
+    font-weight: 700
+    font-size: 55px
+    line-height: 70px
+    color: $dark-grey
+    span
+      color: $orange
+  &__content
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__descr
+    max-width: 540px
+    flex-shrink: 0
+  &__text
+    &:not(:last-child)
+      margin-bottom: 42px
+    span
+      color: $orange
+
+  &__logo
+    width: 352px
+    height: 578px
+    margin: 10px 10px 88px 0
+  &__intro
+    width: 352px
+    height: 578px
+    object-fit: cover
+
+  &__spec
+    display: flex
+    align-items: flex-start
+    counter-reset: section
+    &-wrap
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      max-width: 183px
+      &:not(:last-child)
+        margin-right: 19px
+      &::before
+        position: absolute
+        counter-increment: section
+        content: "0"counter(section)
+        left: 17px
+        top: 123px
+        font-weight: 300
+        font-size: 16px
+        line-height: 160%
+    &-icon
+      @include fl-c
+      width: 115px
+      height: 115px
+      margin: 0 auto
+      margin-bottom: 45px
+      background-color: $orange
+      border-radius: 50%
+      &--chair
+        width: 60px
+        height: 55px
+      &--wardrobe
+        width: 53px
+        height: 59px
+      &--home
+        width: 66px
+        height: 50px
+    &-title
+      margin-bottom: 4px
+      color: $orange
+      font-size: 25px
+      line-height: 160%
+      span
+        font-weight: 800
+    &-text
+      font-weight: 400
+      font-size: 15px
+      line-height: 140%
+
+  &__wrap-btn
+    padding-top: 21px
+    padding-right: 18px
+  &__btn
+    height: 80px
+    padding: 15px 76px 15px 52px

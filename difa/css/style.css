@@ -172,6 +172,35 @@ input {
   cursor: pointer;
 }
 
+.button {
+  position: relative;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 160%;
+  letter-spacing: 0.03em;
+  color: #000000;
+  background-color: #fbb03b;
+  border-radius: 100px;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  -webkit-transform: translateY(-33%);
+  -ms-transform: translateY(-33%);
+  transform: translateY(-33%);
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icons/sprite.svg#arrow-btn);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-transition: right 0.3s linear;
+  -o-transition: right 0.3s linear;
+  transition: right 0.3s linear;
+}
+
 .unvisible {
   position: absolute;
   left: -3000px;
@@ -328,7 +357,7 @@ input {
 .main-slider__btn-fill {
   width: 25px;
   height: 22px;
-  fill: #B2B2B2;
+  fill: #d3d3d3;
   -o-object-fit: cover;
   object-fit: cover;
   -webkit-transition: fill 0.3s ease-in-out;
@@ -416,7 +445,151 @@ input {
   transition: fill 0.3s ease-in-out;
 }
 
+.main-about {
+  position: relative;
+  padding-top: 124px;
+  padding-bottom: 233px;
+  background-color: #e3e3e1;
+  background-image: url(../images/bg/about-bg.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main-about__head {
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 70px;
+  color: #d3d3d3;
+}
+.main-about__head span {
+  color: #fbb03b;
+}
+.main-about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.main-about__descr {
+  max-width: 540px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.main-about__text:not(:last-child) {
+  margin-bottom: 42px;
+}
+.main-about__text span {
+  color: #fbb03b;
+}
+.main-about__logo {
+  width: 352px;
+  height: 578px;
+  margin: 10px 10px 88px 0;
+}
+.main-about__intro {
+  width: 352px;
+  height: 578px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.main-about__spec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  counter-reset: section;
+}
+.main-about__spec-wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-width: 183px;
+}
+.main-about__spec-wrap:not(:last-child) {
+  margin-right: 19px;
+}
+.main-about__spec-wrap::before {
+  position: absolute;
+  counter-increment: section;
+  content: "0" counter(section);
+  left: 17px;
+  top: 123px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 160%;
+}
+.main-about__spec-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 115px;
+  height: 115px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  background-color: #fbb03b;
+  border-radius: 50%;
+}
+.main-about__spec-icon--chair {
+  width: 60px;
+  height: 55px;
+}
+.main-about__spec-icon--wardrobe {
+  width: 53px;
+  height: 59px;
+}
+.main-about__spec-icon--home {
+  width: 66px;
+  height: 50px;
+}
+.main-about__spec-title {
+  margin-bottom: 4px;
+  color: #fbb03b;
+  font-size: 25px;
+  line-height: 160%;
+}
+.main-about__spec-title span {
+  font-weight: 800;
+}
+.main-about__spec-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+}
+.main-about__wrap-btn {
+  padding-top: 21px;
+  padding-right: 18px;
+}
+.main-about__btn {
+  height: 80px;
+  padding: 15px 76px 15px 52px;
+}
+
 @media (min-width: 992px) {
+  .button:hover::before {
+    right: 40px;
+  }
+
   .nav__item:hover {
     color: #fbb03b;
   }
