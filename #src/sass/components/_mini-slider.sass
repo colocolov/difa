@@ -1,5 +1,6 @@
 .mini-slider
   padding-top: 133px
+  padding-bottom: 100px
   background-color: $black
   &__container
     display: flex
@@ -14,13 +15,18 @@
     height: 513px
 
   &__slider
-    // flex-shrink: 0
+    position: relative
     width: 700px
     height: 577px
-    background-color: #fff
-    position: relative
+    background-color: $black
+    &-wrapper
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 919px
   &__slide
-    width: 700px
+    width: 919px
     height: 577px
     // &::after
     //   content: ''
@@ -41,16 +47,17 @@
     cursor: pointer
     z-index: 12
     &-prev
-      left: 0
+      left: 60px
     &-fill
       width: 25px
       height: 22px
-      fill: $dark-grey
+      fill: $black
       object-fit: cover
       transition: fill 0.3s ease-in-out
     &-next
-      right: 0
+      right: 60px
       transform: rotate(180deg)
 
   &__button
-    padding: 13px 48px 13px 25px
+    margin-top: 37px
+    padding: 14px 74px 14px 52px

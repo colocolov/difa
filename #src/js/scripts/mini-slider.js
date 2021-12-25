@@ -1,5 +1,5 @@
 // слайдер на главной
-const miniSlider = new Swiper(".mini-slider", {
+const miniSlider = new Swiper(".mini-slider__slider-wrapper", {
   loop: true,
   autoplay: {
     delay: 3000,
@@ -16,3 +16,22 @@ const miniSlider = new Swiper(".mini-slider", {
   },
 });
 //----- END
+
+// let d = document.querySelector("mini-slider__intro");
+// let topPos = d.offsetTop;
+
+function getCoords(elem) {
+  // кроме IE8-
+  var box = elem.getBoundingClientRect();
+
+  return {
+    top: box.top + pageYOffset,
+    left: box.left + pageXOffset,
+  };
+}
+
+console.log(top);
+
+// if (topPos == offsetTop) {
+// console.log("yes");
+// }

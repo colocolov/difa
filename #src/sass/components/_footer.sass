@@ -1,1 +1,59 @@
 .footer
+  padding-top: 50px
+  padding-bottom: 121px
+  background-color: $black
+  color: $white
+
+  &__head
+    margin-bottom: 56px
+    color: $orange
+    text-transform: lowercase
+
+  &__content
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-bottom: 98px
+
+  &__list
+    display: flex
+    align-items: center
+  &__item
+    margin-bottom: 0!important
+    background-color: $black
+    border: 2px solid $light-grey
+    border-radius: 100%
+    transition: border 0.3s ease-in-out
+    &:not(:last-child)
+      margin-right: 48px
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 87px
+      height: 87px
+    svg
+      width: 39px
+      height: 39px
+      fill: $light-grey
+
+  &__data
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    font-size: 20px
+    line-height: 160%
+    color: $light-grey
+    a
+      transition: color 0.3s ease-in-out
+
+  &__adress
+    font-size: 20px
+    line-height: 160%
+    color: $light-grey
+    font-style: normal
+
+  &__copyright
+    font-size: 14px
+    line-height: 160%
+    color: #737272
