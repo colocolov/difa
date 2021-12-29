@@ -4,43 +4,63 @@
   background-color: $black
   color: $white
 
-  &__head
-    margin-bottom: 56px
-    color: $orange
-    text-transform: lowercase
-
   &__content
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    gap: 20px
+    // grid-column: 6 span
+    // align-items: flex-start
+    // justify-content: space-between
     margin-bottom: 98px
 
+  &__head
+    grid-column: 2 span
+    grid-row: 1 span
+    // margin-bottom: 56px
+    line-height: 1
+    text-transform: lowercase
+    color: $orange
+
   &__list
+    grid-column: 2 span
+    grid-row-start: 2
     display: flex
     align-items: center
+    margin-bottom: 50px
   &__item
     margin-bottom: 0!important
     background-color: $black
-    border: 2px solid $light-grey
-    border-radius: 100%
+    // border: 2px solid $light-grey
+    // border-radius: 100%
     transition: border 0.3s ease-in-out
     &:not(:last-child)
-      margin-right: 48px
+      margin-right: 38px
     a
       display: flex
       align-items: center
       justify-content: center
-      width: 87px
-      height: 87px
+      width: 40px
+      height: 40px
     svg
-      width: 39px
-      height: 39px
+      width: 40px
+      height: 40px
       fill: $light-grey
 
   &__data
+    grid-column: 4 span
+    grid-row: 2 span
+    display: flex
+    align-items: flex-start
+    // justify-content: space-between
+    flex-wrap: wrap
+
+  &__contact
     display: flex
     flex-direction: column
     align-items: flex-start
+    flex-shrink: 0
+    margin-right: 126px
     font-size: 20px
     line-height: 160%
     color: $light-grey
@@ -48,12 +68,13 @@
       transition: color 0.3s ease-in-out
 
   &__adress
+    flex-shrink: 0
     font-size: 20px
     line-height: 160%
     color: $light-grey
     font-style: normal
 
   &__copyright
-    font-size: 14px
+    font-size: 16px
     line-height: 160%
     color: #737272
