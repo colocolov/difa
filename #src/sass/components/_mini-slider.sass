@@ -24,9 +24,9 @@
       top: 0
       left: 0
       height: 100%
-      width: 919px
+      width: 893px
   &__slide
-    width: 919px
+    width: 893px
     height: 577px
     // &::after
     //   content: ''
@@ -40,14 +40,16 @@
     //   z-index: 1
   &__btn
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
+    // top: calc(50% - 11px)
+    // transform: translateY(-50%)
     height: 22px
     width: 25px
     cursor: pointer
     z-index: 12
     &-prev
-      left: 60px
+      top: calc(50% + 14px)
+      left: 40px
+      transform: rotate(180deg)
     &-fill
       width: 25px
       height: 22px
@@ -55,9 +57,9 @@
       object-fit: cover
       transition: fill 0.3s ease-in-out
     &-next
-      right: 60px
-      transform: rotate(180deg)
+      top: 50%
+      right: 50px
 
   &__button
     margin-top: 37px
-    padding: 14px 74px 14px 52px
+    padding: 12px 71px 12px 42px

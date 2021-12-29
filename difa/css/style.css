@@ -524,7 +524,7 @@ input {
   position: absolute;
   counter-increment: section;
   content: "0" counter(section);
-  left: 24px;
+  left: 0;
   top: 123px;
   font-weight: 300;
   font-size: 16px;
@@ -615,25 +615,25 @@ input {
   top: 0;
   left: 0;
   height: 100%;
-  width: 919px;
+  width: 893px;
 }
 .mini-slider__slide {
-  width: 919px;
+  width: 893px;
   height: 577px;
 }
 .mini-slider__btn {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   height: 22px;
   width: 25px;
   cursor: pointer;
   z-index: 12;
 }
 .mini-slider__btn-prev {
-  left: 60px;
+  top: calc(50% + 14px);
+  left: 40px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .mini-slider__btn-fill {
   width: 25px;
@@ -646,14 +646,12 @@ input {
   transition: fill 0.3s ease-in-out;
 }
 .mini-slider__btn-next {
-  right: 60px;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  top: 50%;
+  right: 50px;
 }
 .mini-slider__button {
   margin-top: 37px;
-  padding: 14px 74px 14px 52px;
+  padding: 12px 71px 12px 42px;
 }
 
 .footer {
