@@ -1,0 +1,89 @@
+.page-hero
+  position: relative
+  min-height: 800px
+  padding-top: 148px
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: $black
+  color: $grey
+  &::before
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    right: 0
+    height: 100%
+    width: 100%
+    background: linear-gradient(252.85deg, #000000 4.18%, rgba(0, 0, 0, 0.2) 100.01%)
+    mix-blend-mode: multiply
+
+  &__wrapper
+    position: relative
+    padding-left: 178px
+    display: flex
+    // align-items: center
+    .slider-aside
+      bottom: -38px
+      left: -63px
+
+  &__head
+    position: relative
+    width: 330px
+    font-size: 207px
+    margin-top: -24px
+    line-height: 191px
+    letter-spacing: 2.5px
+    word-wrap: break-word
+    margin-right: 51px
+    color: $orange
+    &::before
+      position: absolute
+      content: ''
+      top: 54px
+      right: 49px
+      height: 113px
+      width: 63px
+      fill: $grey
+      background-image: url(../images/icons/sprite.svg#double-line)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+    &::after
+      position: absolute
+      content: ''
+      bottom: 16px
+      right: 0px
+      height: 48px
+      width: 48px
+      fill: $grey
+      background-image: url(../images/icons/sprite.svg#point)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+
+  &__content
+    max-width: 346px
+    padding-top: 37px
+    p
+      font-weight: 400
+      font-size: 14px
+      line-height: 160%
+      color: inherit
+      &:not(:last-child)
+        margin-bottom: 37px
+
+  &__btn
+    padding: 12px 40px 12px 23px
+    font-size: 14px
+    line-height: 1
+    &::before
+      width: 12px
+      height: 12px
+      right: 24px
+      transform: translateY(-42%)
+
+  &--interior
+    background-image: url(../images/portfolio/slide-5.jpg)
+    &::before
+      background: linear-gradient(107.15deg, #000000 7.04%, rgba(0, 0, 0, 0.5) 100%)
