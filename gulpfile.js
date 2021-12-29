@@ -103,7 +103,7 @@ function css() {
     )
     .pipe(
       autoprefixer({
-        overrideBrowserslist: ["last 7 versions"],
+        overrideBrowserslist: ["last 5 versions"],
         grid: true,
         cascade: false,
       })
@@ -124,7 +124,7 @@ function cssBuild() {
     .pipe(mediagroup())
     .pipe(
       autoprefixer({
-        overrideBrowserslist: ["last 7 versions"],
+        overrideBrowserslist: ["last 5 versions"],
         grid: true,
         cascade: false,
       })

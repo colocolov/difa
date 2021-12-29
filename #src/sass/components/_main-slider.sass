@@ -1,17 +1,19 @@
 .main-slider
   position: relative
   height: 100vh
+  min-height: 580px
   max-height: 800px
   background-color: $black
   color: $white
   &__container
     box-sizing: border-box
-    width: 100%
     display: flex
     justify-content: flex-end
+    width: 100%
+    padding-top: 314px
   &__slide
     display: flex
-    align-items: center
+    // align-items: center
     background-position: center
     background-repeat: no-repeat
     background-size: cover
@@ -19,7 +21,7 @@
       position: absolute
       content: ''
       top: 0
-      left: -16px
+      left: -9px
       background-image: url(../images/slider-aside.svg)
       background-size: cover
       background-position: 0 0
