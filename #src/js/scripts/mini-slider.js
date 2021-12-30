@@ -20,17 +20,17 @@ const miniSlider = new Swiper(".mini-slider__slider-wrapper", {
 // let d = document.querySelector("mini-slider__intro");
 // let topPos = d.offsetTop;
 
-function getCoords(elem) {
-  // кроме IE8-
-  var box = elem.getBoundingClientRect();
+// function getCoords(elem) {
+//   // кроме IE8-
+//   var box = elem.getBoundingClientRect();
 
-  return {
-    top: box.top + pageYOffset,
-    left: box.left + pageXOffset,
-  };
-}
+//   return {
+//     top: box.top + pageYOffset,
+//     left: box.left + pageXOffset,
+//   };
+// }
 
-console.log(top);
+// console.log(top);
 
 // if (topPos == offsetTop) {
 // console.log("yes");
