@@ -29,7 +29,7 @@
 
   &__head
     position: relative
-    width: 330px
+    width: 331px
     font-size: 207px
     margin-top: -24px
     line-height: 191px
@@ -60,6 +60,14 @@
       background-position: center
       background-repeat: no-repeat
       background-size: cover
+    &--mobilier
+      margin-right: 83px
+      &::before
+        top: 244px
+        right: 53px
+      &::after
+        bottom: 16px
+        right: -34px
 
   &__content
     max-width: 346px
@@ -71,6 +79,8 @@
       color: inherit
       &:not(:last-child)
         margin-bottom: 37px
+      span
+        color: $orange
 
   &__btn
     padding: 12px 40px 12px 23px
@@ -86,3 +96,5 @@
     background-image: url(../images/portfolio/slide-5.jpg)
     &::before
       background: linear-gradient(107.15deg, #000000 7.04%, rgba(0, 0, 0, 0.5) 100%)
+  &--mobilier
+    background-image: url(../images/portfolio/slide-6.jpg)
