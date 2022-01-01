@@ -1,1 +1,58 @@
 @media ( max-width:576px )
+  body
+    font-size: 15px
+
+  .button
+    font-size: 20px
+
+  .main-slider
+    max-height: 553px
+  .main-slider__container
+    margin-left: 0
+    padding-top: 208px
+  .main-slider__head
+    max-width: 70%
+    line-height: 110%
+    font-size: 36px
+  .main-slider__btn
+    @include hide
+
+  .main-about
+    padding-top: 50px
+    padding-bottom: 60px
+  .main-about__spec-wrap::before
+    display: none
+  .main-about__spec-icon
+    width: 75px
+    height: 75px
+    margin-bottom: 30px
+    &--chair
+      width: 40px
+    &--wardrobe
+      width: 40px
+    &--home
+      width: 40px
+  .main-about__spec-title
+    font-size: 15px
+  .main-about__spec-text
+    font-size: 13px
+
+  .mini-slider
+    padding-bottom: 45px
+  .mini-slider__slider
+    height: 300px
+  .mini-slider__intro
+    width: 170px
+    top: 83px
+  .mini-slider__button
+    padding: 6px 20px
+  .mini-slider__btn
+    @include hide
+
+  .footer__content
+    grid-template-rows: 50px 1fr
+  .footer__contact,
+  .footer__adress
+    font-size: 16px
+  .footer__copyright
+    font-size: 14px
