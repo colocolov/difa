@@ -2,8 +2,10 @@
 
   body
     font-size: 18px
+    &._lock
+      overflow: hidden
 
-  @import 'nav'
+  // @import 'nav'
 
   .heading
     font-size: 36px
@@ -12,15 +14,35 @@
     padding-left: 46px
     padding-right: 46px
 
+  .header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 7
+    background-color: $black
+  .header__container
+    align-items: center
   .header__link
     &--logo
       width: 88px
       height: 41px
     &--phone
-      display: none
+      display: block
+      margin-bottom: 40px
+      font-size: 18px
 
   .slider-aside
     @include hide
+  .slider-aside__list
+    display: flex
+    align-items: center
+  .slider-aside__item:not(:last-child)
+    margin-bottom: 0
+    margin-right: 30px
+  .slider-aside__item .social__icon
+    width: 40px
+    height: 40px
 
   .main-slider
     padding-top: 116px
