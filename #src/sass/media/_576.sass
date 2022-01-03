@@ -49,6 +49,63 @@
   .mini-slider__btn
     @include hide
 
+  .page
+    padding-top: 80px
+  .page-hero__wrapper
+    flex-wrap: wrap
+  .page-hero__head
+    font-size: 100px
+    width: 210px
+    &--interior
+      margin-right: 0
+      &::before
+        height: 79px
+        width: 45px
+        top: 4px
+        right: 61px
+      &::after
+        right: 71px
+        top: 239px
+        height: 30px
+        width: 30px
+    &--mobilier
+      margin-right: 0
+      &::before
+        height: 79px
+        width: 45px
+        top: 97px
+        right: 61px
+      &::after
+        right: 13px
+        top: 239px
+        height: 30px
+        width: 30px
+    &--arhitectura
+      margin-right: 0
+      &::before
+        height: 79px
+        width: 45px
+        top: 4px
+        right: -3px
+      &::after
+        right: 13px
+        top: 239px
+        height: 30px
+        width: 30px
+  .page-hero__content
+    padding-top: 30px
+    max-width: 100%
+    width: 100%
+    p:not(:last-child)
+      margin-bottom: 15px
+  .page__photo
+    &--middle,
+    &--small
+      height: 160px
+    &--median,
+    &--big
+      height: 240px
+
   .footer__content
     grid-template-rows: 50px 1fr
   .footer__contact,

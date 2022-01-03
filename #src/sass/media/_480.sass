@@ -43,6 +43,40 @@
   .mini-slider__button
     margin-top: 79px
 
+  .page__container
+    padding-left: 0
+    padding-right: 0
+    row-gap: 40px
+    grid-template-rows: repeat(6, min-content)
+  .page-hero
+    padding-top: 208px
+    background-size: 100% 260px
+    &--interior,
+    &--mobilier,
+    &--arhitectura
+      padding-bottom: 0
+  .page-hero__head
+    margin-left: 50px
+  .page-hero__content
+    @include hide
+  .page__work
+    &--middle,
+    &--small
+      grid-column: 6 span
+  .page__photo
+    &--middle,
+    &--small,
+    &--median,
+    &--big
+      height: 200px
+  .page__title
+    padding-left: 18%
+    font-size: 14px
+  .page__adress
+    padding-left: 18%
+    font-weight: 100
+    font-size: 12px
+
   .footer__content
     grid-template-rows: 40px 1fr
   .footer__phone,
