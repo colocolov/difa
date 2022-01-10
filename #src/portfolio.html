@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ro">
+  @include('html/_head.html', { "title":"Portfolio" })
+  <body>
+    <div class="wrapper">
+      @include('html/_header.html') @include('html/_portfolio-head.html')
+      <main class="main">@include('html/_portfolio-content.html')</main>
+      @include('html/_footer.html')
+    </div>
+
+    <!-- подключение скриптов -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
