@@ -193,5 +193,77 @@
       width: 76px
       background-color: $orange
 
+  .contact
+    &::before,
+    &::after
+      display: none
+  .contact__image
+    width: 100vw
+    height: 247px
+    display: block
+    opacity: 1
+    visibility: visible
+    margin-left: -46px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      background-image: url(../images/icons/sprite.svg#double-line-orange)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      z-index: 1
+      bottom: -59px
+      right: 34px
+      height: 110px
+      width: 61px
+
+  .contact__head
+    transform: translateY(-60px)
+    // margin-top: -10px
+    margin-bottom: 0
+    margin-left: 0
+    &::before
+      display: none
+  .contact__content
+    margin-left: 0
+    flex-wrap: wrap
+  .contact__list
+    display: flex
+    opacity: 1
+    visibility: visible
+    flex-direction: column
+    order: 2
+  .contact__data
+    margin-bottom: 40px
+    display: flex
+    flex-direction: column
+  .contact__data-wrap
+    display: flex
+  .contact__data-wrap-data
+    margin-bottom: 0
+    margin-right: 0
+  .contact__data-adress
+    order: 3
+    margin-right: 70px
+  .contact__item
+    &:not(:last-child)
+      margin-bottom: 30px
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 40px
+      height: 40px
+    svg
+      width: 40px
+      height: 40px
+      fill: $light-grey
+  .contact__button--call
+    order: -1
+    margin-bottom: 60px
+  .contact__location
+    height: 450px
+
   .footer
     padding-top: 35px

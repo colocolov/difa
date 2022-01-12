@@ -32,7 +32,7 @@
     width: 100%
     height: 100%
 
-  &-head
+  &__head
     margin-bottom: 84px
     font-family: "NoeDisplay", sans-serif
     font-weight: 700
@@ -59,13 +59,17 @@
     margin-bottom: 97px
     margin-left: 73px
 
+  &__list,
+  &__image
+    @include hide
+
   &__data
     &-head
       line-height: 1
       text-transform: lowercase
       color: $orange
       margin-bottom: 30px
-    &-wrap
+    &-wrap-data
       display: flex
       justify-content: space-between
       margin-bottom: 62px
@@ -126,3 +130,7 @@
         border: 1px solid $orange
         border-radius: 3px
         padding: 10px 15px 5px 7px
+
+  &__location
+    height: 610px
+    width: 100%
