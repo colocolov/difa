@@ -13,15 +13,15 @@
     top: 0
     left: 0
     right: 0
-    height: 100%
     width: 100%
+    height: 100%
     background: linear-gradient(252.85deg, #000000 4.18%, rgba(0, 0, 0, 0.2) 100.01%)
     mix-blend-mode: multiply
 
   &__wrapper
     position: relative
-    padding-left: 178px
     display: flex
+    padding-left: 178px
     // align-items: center
     .slider-aside
       bottom: -38px
@@ -29,21 +29,21 @@
 
   &__head
     position: relative
+    margin-top: -24px
+    margin-right: 51px
     width: 331px
     font-size: 207px
-    margin-top: -24px
     line-height: 0.92
     letter-spacing: 2.5px
     word-wrap: break-word
-    margin-right: 51px
     color: $orange
     &::before
-      content: ''
       position: absolute
+      content: ''
       top: 54px
       right: 49px
-      height: 113px
       width: 63px
+      height: 113px
       background-image: url(../images/icons/sprite.svg#double-line)
       background-position: center
       background-repeat: no-repeat
@@ -51,15 +51,15 @@
     &::after
       position: absolute
       content: ''
-      bottom: 16px
       right: 0px
-      height: 48px
+      bottom: 16px
       width: 48px
-      fill: $grey
+      height: 48px
       background-image: url(../images/icons/sprite.svg#point)
       background-position: center
       background-repeat: no-repeat
       background-size: cover
+      fill: $grey
     &--mobilier
       margin-right: 83px
       &::before

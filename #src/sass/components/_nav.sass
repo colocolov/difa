@@ -5,24 +5,24 @@
     margin-top: -5px
     @media (max-width: 768px)
       position: fixed
-      width: 100%
-      height: 100%
-      overflow: auto
       top: 0
       right: -100%
+      width: 100%
+      height: 100%
       padding: 150px 30px 50px 70px
+      overflow: auto
       background-color: rgba($black,0.9)
       transition: right 0.5s ease 0s
       &::before
-        content: ''
         position: fixed
+        content: ''
         width: 100%
         height: 116px
         top: 0
         right: -100%
         background-color: rgba($black,0.9)
-        transition: right 0.5s ease 0s
         z-index: 2
+        transition: right 0.5s ease 0s
     &._active
       right: 0
       &::before
@@ -40,7 +40,6 @@
     flex-wrap: wrap
     margin: 0 3px
     padding: 5px 0
-
     font-weight: 800
     font-size: 14px
     line-height: 160%
@@ -53,10 +52,10 @@
     @media (any-hover: hover)
       &:hover
         .menu__sub-list
-          transform: translate(0px, 0px)
           opacity: 1
           visibility: visible
           pointer-events: auto
+          transform: translate(0px, 0px)
         .menu__arrow
           transform: rotate(-180deg)
         .menu__arrow
@@ -64,10 +63,10 @@
     @media (min-width: 768px)
       &._hover
         .menu__sub-list
-          transform: translate(0px, 0px)
           opacity: 1
           visibility: visible
           pointer-events: auto
+          transform: translate(0px, 0px)
         .menu__arrow
           transform: rotate(-180deg)
     @media (max-width: 768px)
@@ -81,37 +80,37 @@
   &__arrow
     margin-left: 4px
     // margin-top: -10px
-    transition: all 0.3s ease-in-out
-    background-color: transparent
-    border: none
-    outline: none
-    cursor: pointer
     width: 12px
     height: 12px
+    border: none
+    background-color: transparent
     background-image: url(../images/icons/sprite.svg#arrow-menu)
     background-repeat: no-repeat
-    background-size: 10px
     background-position: center
+    background-size: 10px
+    cursor: pointer
+    outline: none
+    transition: all 0.3s ease-in-out
     // transform: rotate(90deg)
 
   &__sub-list
     position: relative
-    background-color: $orange
-    padding: 15px
     flex: 1 1 100%
+    padding: 15px
+    background-color: $orange
     @media ( min-width: 768px )
       position: absolute
       left: 0
       top: 100%
+      min-width: 50px
       opacity: 0
       visibility: hidden
-      min-width: 50px
-      transition: all 0.3s ease-in-out
       transform: translate(0px, 10px)
       pointer-events: none
+      transition: all 0.3s ease-in-out
   &__sub-item
-    color: $black
     line-height: 120%
+    color: $black
     &:not(:last-child)
       margin-bottom: 5px
     a
@@ -122,26 +121,26 @@
   &__icon
     display: none
     @media ( max-width: 768px )
-      display: block
       position: relative
+      display: block
       // top: 18px
       // right: 10px
       flex: 0 0 32px
       width: 32px
       height: 29px
-      cursor: pointer
-      z-index: 5
+      border: none
       background-color: transparent
       outline: none
-      border: none
+      cursor: pointer
+      z-index: 5
     span
-      transition: all 0.3s ease 0s
+      position: absolute
       top: calc( 50% - 3px )
       left: 0
-      position: absolute
       width: 100%
       height: 6px
       background-color: #fff
+      transition: all 0.3s ease 0s
       &:first-child
         top: 0
       &:last-child
@@ -151,8 +150,8 @@
       span
         transform: scale(0)
         &:first-child
+          top: calc( 50% - 3px )
           transform: rotate(-45deg)
-          top: calc( 50% - 3px )
         &:last-child
-          transform: rotate(45deg)
           top: calc( 50% - 3px )
+          transform: rotate(45deg)
