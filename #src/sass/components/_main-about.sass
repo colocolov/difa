@@ -8,8 +8,8 @@
   background-repeat: no-repeat
   background-size: contain
   h2
-    font-family: "NoeDisplay",sans-serif
     margin-bottom: 36px
+    font-family: "NoeDisplay",sans-serif
     font-weight: 700
     font-size: 55px
     line-height: 127%
@@ -31,9 +31,9 @@
       color: $orange
 
   &__intro
+    margin: 7px 0 88px 0
     width: 352px
     height: 578px
-    margin: 7px 0 88px 0
   &__image
     width: 352px
     height: 578px
@@ -42,10 +42,10 @@
   &__spec
     display: flex
     align-items: flex-start
-    counter-reset: section
     flex-wrap: wrap
-    padding-top: 115px
     max-width: 607px
+    padding-top: 115px
+    counter-reset: section
     &-wrap
       position: relative
       display: flex
@@ -57,21 +57,21 @@
         margin-right: 19px
       &::before
         position: absolute
-        counter-increment: section
-        content: "0"counter(section)
         left: 0
         top: 123px
         font-weight: 300
         font-size: 16px
         line-height: 160%
+        counter-increment: section
+        content: "0"counter(section)
     &-icon
       @include fl-c
-      width: 115px
-      height: 115px
       margin: 0 auto
       margin-bottom: 77px
-      background-color: $orange
+      width: 115px
+      height: 115px
       border-radius: 50%
+      background-color: $orange
       &--chair
         width: 60px
         height: 55px
@@ -83,9 +83,9 @@
         height: 50px
     &-title
       margin-bottom: 5px
-      color: $orange
       font-size: 25px
       line-height: 160%
+      color: $orange
       span
         font-weight: 800
     &-text
