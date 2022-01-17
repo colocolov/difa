@@ -225,8 +225,8 @@ input {
   position: absolute;
   top: 0;
   width: 100%;
-  padding-top: 45px;
-  padding-bottom: 39px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: #ffffff;
   z-index: 100;
 }
@@ -762,8 +762,6 @@ input {
   align-items: flex-start;
   max-width: 183px;
   margin-bottom: 55px;
-}
-.main-about__spec-wrap:not(:last-child) {
   margin-right: 19px;
 }
 .main-about__spec-wrap::before {
@@ -815,6 +813,7 @@ input {
   font-weight: 800;
 }
 .main-about__spec-text {
+  margin-bottom: 10px !important;
   font-weight: 400;
   font-size: 15px;
   line-height: 140%;
@@ -1034,7 +1033,7 @@ input {
   background-image: url(../images/portfolio/slide-4.jpg);
 }
 
-.page {
+.page__section {
   padding-top: 110px;
   padding-bottom: 80px;
   background-color: #000000;
@@ -1118,13 +1117,13 @@ input {
 .page__work:nth-child(11) .page__photo {
   height: 510px;
 }
-.page__work:nth-child(6), .page__work:nth-child(12) {
+.page__work:nth-child(6n) {
   -ms-grid-column-span: 6;
   grid-column: 6 span;
   -ms-grid-row-span: 1;
   grid-row: 1 span;
 }
-.page__work:nth-child(6) .page__photo, .page__work:nth-child(12) .page__photo {
+.page__work:nth-child(6n) .page__photo {
   height: 388px;
 }
 .page__photo {
@@ -1133,12 +1132,6 @@ input {
   -o-transition: transform 0.5s linear;
   transition: transform 0.5s linear;
   transition: transform 0.5s linear, -webkit-transform 0.5s linear;
-}
-.page__photo--median {
-  height: 510px;
-}
-.page__photo--big {
-  height: 388px;
 }
 .page__title {
   margin-top: 9px;
@@ -1377,18 +1370,6 @@ input {
   color: #c4c4c4;
   font-style: normal;
 }
-.contact__button {
-  padding: 6px 19px;
-  width: 160px;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 160%;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
-}
-.contact__button::before {
-  display: none;
-}
 .contact__form {
   width: 316px;
 }
@@ -1398,6 +1379,7 @@ input {
   padding: 10px 15px 3px 7px;
   background-color: transparent;
   border: none;
+  border: 1px solid transparent;
   border-bottom: 2px solid #fbb03b;
   color: #ffffff;
   font-weight: 400;
@@ -1440,7 +1422,20 @@ input {
   outline: #fbb03b;
   color: #fbb03b;
   border: 1px solid #fbb03b;
+  border-bottom: 2px solid #fbb03b;
   border-radius: 3px;
+}
+.contact__button {
+  padding: 6px 19px;
+  width: 160px;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+.contact__button::before {
+  display: none;
 }
 .contact__location {
   width: 100%;
@@ -2102,7 +2097,7 @@ input {
   .main-slider {
     max-height: 590px;
     min-height: auto;
-    padding-top: 116px;
+    padding-top: 101px;
     padding-bottom: 116px;
   }
   .main-slider::before {
@@ -2471,6 +2466,10 @@ input {
     padding-bottom: 60px;
   }
 
+  .main-about__spec-wrap {
+    max-width: 110px;
+  }
+
   .main-about__spec-wrap::before {
     display: none;
   }
@@ -2589,6 +2588,11 @@ input {
     margin-bottom: 15px;
   }
 
+  .page-hero__btn {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
   .page__photo--middle, .page__photo--small {
     height: 160px;
   }
@@ -2655,6 +2659,11 @@ input {
 
   .main-about__spec {
     padding-top: 20px;
+  }
+
+  .main-about__spec-wrap {
+    margin-right: 10px;
+    margin-bottom: 30px;
   }
 
   .main-about__spec-icon {
