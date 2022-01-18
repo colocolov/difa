@@ -108,74 +108,42 @@
   .page-hero__content
     padding-top: 0
   .page-hero__head
-    font-size: 130px
     width: 250px
+    flex-shrink: 0
     &--interior
       margin-right: 30px
-      &::before
-        width: 60px
-        height: 97px
-        top: 10px
-        right: 55px
-      &::after
-        width: 37px
-        height: 37px
-        top: 310px
-        right: 74px
     &--mobilier
       margin-right: 30px
-      &::before
-        width: 60px
-        height: 97px
-        top: 126px
-        right: 55px
-      &::after
-        width: 37px
-        height: 37px
-        top: 310px
-        right: -0px
     &--arhitectura
       width: 254px
       margin-right: 40px
-      &::before
-        width: 60px
-        height: 97px
-        top: 10px
-        right: -14px
-      &::after
-        width: 37px
-        height: 37px
-        top: 310px
-        right: -28px
   .page-hero
     padding-top: 170px
   .page__work
-    &--middle
-      order: 1
-    &--small
+    &:nth-child(6n+1),
+    &:nth-child(6n+2)
+      & .page__photo
+        height: 35vw
+    &:nth-child(6n+5),
+    &:nth-child(6n+4)
+      // grid-column: 2 span
+      grid-row: 1 span
       grid-column: 3 span
-      order: 3
-    &--median
+      & .page__photo
+        height: 35vw
+    &:nth-child(6n+3)
+      grid-column: 6 span
+      grid-row: 2 span
+      & .page__photo
+        height: 35vw
+    &:nth-child(6n)
       grid-column: 6 span
       grid-row: 1 span
-      order: 2
-    &--big
-      order: 4
+      & .page__photo
+        height: 35vw
     &:first-child::before,
     &:last-child::before
       display: none
-  .page__photo
-    &--middle
-      height: 230px
-    &--small
-      // height: 140px
-      height: 230px
-    &--median
-      // height: 375px
-      height: 280px
-    &--big
-      // height: 272px
-      height: 280px
   .page__title
     font-size: 16px
   .page__adress

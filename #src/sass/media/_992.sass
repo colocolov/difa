@@ -69,35 +69,28 @@
   .page-hero
     min-height: 730px
   .page-hero__head
-    font-size: 175px
-  .page-hero__head
+    & img
+      object-fit: contain
     &--interior
       margin-right: 45px
-      &::before
-        top: 32px
-        right: 77px
-      &::after
-        right: 97px
     &--mobilier
       margin-right: 50px
-      &::before
-        top: 186px
-        right: 94px
-      &::after
-        right: 10px
     &--arhitectura
       width: 358px
       margin-right: 40px
-      &::before
-        top: 32px
-        right: 1px
-      &::after
-        bottom: 77px
-        right: 20px
-
   .page-hero__btn
     padding: 10px 20px
     font-size: 16px
+  .page__container
+    column-gap: 50px
+
+  .portfolio-head__undertitle
+    font-size: 80px
+  .portfolio-head__head
+    font-size: 28px
+  .portfolio-head__btn
+    font-size: 14px
+    padding: 12px 23px
 
   .contact__data-wrap-data
     flex-wrap: wrap
@@ -139,3 +132,8 @@
   .footer__adress
     width: 100%
     margin-bottom: 28px
+
+@media ( max-width:840px )
+  .page-hero--mobilier,
+  .page-hero--arhitectura
+    padding-top: 220px
