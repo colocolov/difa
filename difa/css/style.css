@@ -271,9 +271,9 @@ input {
   .menu__body {
     position: fixed;
     top: 0;
+    bottom: 0;
     right: -100%;
     width: 100%;
-    height: 100%;
     padding: 150px 30px 50px 70px;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.95);
@@ -1340,7 +1340,7 @@ input {
 .contact__form {
   width: 316px;
 }
-.contact__form input {
+.contact__form span > input {
   width: 100%;
   margin-bottom: 35px;
   padding: 10px 15px 3px 7px;
@@ -1354,37 +1354,37 @@ input {
   line-height: 160%;
   outline: none;
 }
-.contact__form input::-webkit-input-placeholder {
+.contact__form span > input::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
   color: rgba(196, 196, 196, 0.8);
 }
-.contact__form input::-moz-placeholder {
+.contact__form span > input::-moz-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
   color: rgba(196, 196, 196, 0.8);
 }
-.contact__form input:-ms-input-placeholder {
+.contact__form span > input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
   color: rgba(196, 196, 196, 0.8);
 }
-.contact__form input::-ms-input-placeholder {
+.contact__form span > input::-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
   color: rgba(196, 196, 196, 0.8);
 }
-.contact__form input::placeholder {
+.contact__form span > input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
   color: rgba(196, 196, 196, 0.8);
 }
-.contact__form input:focus {
+.contact__form span > input:focus {
   padding: 10px 15px 5px 7px;
   outline: #fbb03b;
   color: #fbb03b;
@@ -2148,7 +2148,7 @@ input {
     padding: 8px 30px;
   }
 
-  .page {
+  .page__section {
     padding-bottom: 45px;
   }
 
@@ -2458,8 +2458,8 @@ input {
     visibility: hidden;
   }
 
-  .page {
-    padding-top: 80px;
+  .page__section {
+    padding-top: 75px;
   }
 
   .page-hero__wrapper {
@@ -2633,15 +2633,6 @@ input {
     display: none;
     opacity: 0;
     visibility: hidden;
-  }
-
-  .page__work--middle, .page__work--small {
-    -ms-grid-column-span: 6;
-    grid-column: 6 span;
-  }
-
-  .page__photo--middle, .page__photo--small, .page__photo--median, .page__photo--big {
-    height: 200px;
   }
 
   .page__title {
