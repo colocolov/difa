@@ -259,6 +259,9 @@ input {
   line-height: 160%;
   letter-spacing: 0.2em;
   color: #fbb03b;
+  -webkit-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
 }
 
 .menu {
@@ -1413,6 +1416,88 @@ input {
   height: 610px;
 }
 
+.error-404 {
+  background-color: #fbb03b;
+  height: 100vh;
+  padding-top: 80px;
+}
+.error-404__content {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.error-404__head {
+  font-size: 160px;
+  line-height: 110%;
+}
+.error-404__block {
+  position: relative;
+  margin-bottom: 40px;
+  background-color: #fbb03b;
+  padding: 20px 65px;
+  -webkit-box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
+  -webkit-transform: translateY(-35px) rotate(-10deg);
+  -ms-transform: translateY(-35px) rotate(-10deg);
+  transform: translateY(-35px) rotate(-10deg);
+}
+.error-404__block::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 80px;
+  background: url(../images/bg/dog.png) no-repeat center/contain;
+}
+.error-404__text {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.error-404__btn {
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  padding: 8px 32px;
+  background-color: #000000;
+  font-weight: 400;
+}
+.error-404__btn::before {
+  display: none;
+}
+
+.not-found .header__link--phone {
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+.not-found .menu__item {
+  color: #ffffff;
+}
+.not-found .menu__sub-list {
+  background-color: #ffffff;
+}
+.not-found .menu__sub-link {
+  color: #fbb03b;
+}
+
 .footer {
   padding-top: 50px;
   padding-bottom: 100px;
@@ -1598,6 +1683,19 @@ input {
 
   .contact__data-contact a:hover {
     color: #fbb03b;
+  }
+
+  .error-404__btn:hover {
+    background-color: #ffffff;
+    color: #fbb03b;
+  }
+
+  .not-found .header__link--phone:hover {
+    color: #ffffff;
+  }
+
+  .not-found .menu__item:hover {
+    color: #ffffff;
   }
 
   .footer__item:hover {
@@ -2365,6 +2463,10 @@ input {
     height: 450px;
   }
 
+  .error-404__head {
+    font-size: 160px;
+  }
+
   .footer {
     padding-top: 35px;
   }
@@ -2511,6 +2613,10 @@ input {
 
   .contact__location {
     height: 400px;
+  }
+
+  .error-404__text {
+    font-size: 24px;
   }
 
   .footer--contact {
@@ -2679,6 +2785,18 @@ input {
 
   .contact__location {
     height: 350px;
+  }
+
+  .error-404__head {
+    font-size: 130px;
+  }
+
+  .error-404__block {
+    padding: 12px 25px;
+  }
+
+  .error-404__text {
+    font-size: 20px;
   }
 
   .footer__content {
