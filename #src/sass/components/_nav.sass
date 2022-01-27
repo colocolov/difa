@@ -2,9 +2,11 @@
   // margin-top: 6px
   margin-left: 50px
   &__body
-    margin-top: -5px
+    display: flex
+    margin-top: 0
     @media (max-width: 768px)
       position: fixed
+      display: block
       top: 0
       bottom: 0
       // left: 0
@@ -41,7 +43,7 @@
     @include fl-all
     flex-wrap: wrap
     margin: 0 3px
-    padding: 5px 0
+    padding: 0 0 5px 0
     font-weight: 800
     font-size: 14px
     line-height: 160%
@@ -53,7 +55,7 @@
       margin-right: 39px
     @media (any-hover: hover)
       &:hover
-        .menu__sub-list
+        .sub-menu
           opacity: 1
           visibility: visible
           pointer-events: auto
@@ -64,7 +66,7 @@
           color: $orange
     @media (min-width: 768px)
       &._hover
-        .menu__sub-list
+        .sub-menu
           opacity: 1
           visibility: visible
           pointer-events: auto
@@ -94,31 +96,8 @@
     outline: none
     transition: all 0.3s ease-in-out
     // transform: rotate(90deg)
-
-  &__sub-list
-    position: relative
-    flex: 1 1 100%
-    padding: 15px
-    background-color: $orange
-    @media ( min-width: 768px )
-      position: absolute
-      left: 0
-      top: 100%
-      min-width: 50px
-      opacity: 0
-      visibility: hidden
-      transform: translate(0px, 10px)
-      pointer-events: none
-      transition: all 0.3s ease-in-out
-  &__sub-item
-    line-height: 120%
-    color: $black
-    &:not(:last-child)
-      margin-bottom: 5px
-    a
-      color: $white
-      &:hover
-        text-decoration: underline
+    @media (max-width: 768px)
+      display: none
 
   &__icon
     display: none
@@ -157,3 +136,37 @@
         &:last-child
           top: calc( 50% - 3px )
           transform: rotate(45deg)
+
+.sub-menu
+  position: relative
+  flex: 1 1 100%
+  padding: 15px
+  background-color: $orange
+  @media ( min-width: 768px )
+    position: absolute
+    left: 0
+    top: 100%
+    min-width: 50px
+    opacity: 0
+    visibility: hidden
+    transform: translate(0px, 10px)
+    pointer-events: none
+    transition: all 0.3s ease-in-out
+  @media ( max-width: 768px )
+    position: relative
+    background-color: transparent
+    margin-top: 20px
+    padding-left: 0
+  li
+    line-height: 120%
+    color: $black
+    &:not(:last-child)
+      margin-bottom: 5px
+    a
+      color: $white
+      &:hover
+        text-decoration: underline
+    @media ( max-width: 768px )
+      font-weight: 700
+      &:not(:last-child)
+        margin-bottom: 10px
