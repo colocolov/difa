@@ -549,9 +549,9 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   padding-top: 314px;
 }
@@ -562,18 +562,6 @@ input {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.main-slider__slide::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: -9px;
-  width: 321px;
-  height: 100%;
-  background-image: url(../images/slider-aside.svg);
-  background-size: cover;
-  background-position: 0 0;
-  z-index: 3;
 }
 .main-slider__slide::after {
   position: absolute;
@@ -1014,18 +1002,9 @@ input {
   -ms-transform: translateY(-42%);
   transform: translateY(-42%);
 }
-.page-hero--interior {
-  background-image: url(../images/portfolio/slide-5.jpg);
-}
 .page-hero--interior::before {
   background: -o-linear-gradient(342.85deg, #000000 7.04%, rgba(0, 0, 0, 0.5) 100%);
   background: linear-gradient(107.15deg, #000000 7.04%, rgba(0, 0, 0, 0.5) 100%);
-}
-.page-hero--mobilier {
-  background-image: url(../images/portfolio/slide-6.jpg);
-}
-.page-hero--arhitectura {
-  background-image: url(../images/portfolio/slide-4.jpg);
 }
 
 .page__section {

@@ -198,7 +198,7 @@ const headerSlider = new Swiper(".main-slider", {
   loop: true,
   autoplay: {
     //пауза между прокруткой
-    delay: 3000,
+    delay: 5000,
     //закончить на последнем слайде
     // stopOnLastSlide: false,
     //отключить после ручного переключения
