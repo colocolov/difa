@@ -1,24 +1,5 @@
 // мобильное меню
 
-//выпадающее меню для мобильных устройств
-document.addEventListener("click", documentActions);
-
-function documentActions(e) {
-  const targetElement = e.target;
-  if (window.innerWidth > 900) {
-    if (targetElement.classList.contains("menu__arrow")) {
-      targetElement.closest(".menu__item").classList.toggle("_hover");
-    }
-    if (
-      !targetElement.closest(".menu__item") &&
-      document.querySelectorAll(".menu__item._hover").length > 0
-    ) {
-      // console.log("ehhh");
-      // _removeClasses(document.querySelectorAll(".menu__item._hover"), "_hover");
-    }
-  }
-}
-
 // проверка, является ли уствройство мобильным
 const isMobile = {
   Android: function () {
@@ -50,6 +31,43 @@ const isMobile = {
 if (isMobile.any()) {
   // document.querySelector('html').classList.add('_touch');
   document.body.classList.add("_touch");
+}
+
+//выпадающее меню для мобильных устройств
+document.addEventListener("click", documentActions);
+
+function documentActions(e) {
+  const targetElement = e.target;
+  if (window.innerWidth > 768 && isMobile.any()) {
+    if (targetElement.classList.contains("menu__link")) {
+      // console.log("ehhh");
+      targetElement.closest(".menu__item").classList.toggle("_hover");
+    }
+    if (
+      !targetElement.closest(".menu__item") &&
+      document.querySelectorAll(".menu__item._hover").length > 0
+    ) {
+      var element = document.querySelector(".menu__item._hover");
+      element.classList.remove("_hover");
+    }
+  }
+
+  if (window.innerWidth > 768 && isMobile.any()) {
+    if (
+      targetElement.closest(".menu__arrow") &&
+      !targetElement.closest(".sub-menu")
+    ) {
+      e.preventDefault();
+      targetElement.closest(".menu__item").classList.toggle("_hover");
+    }
+    if (
+      !targetElement.closest(".menu__item") &&
+      document.querySelectorAll(".menu__item._hover").length > 0
+    ) {
+      var element = document.querySelector(".menu__item._hover");
+      element.classList.remove("_hover");
+    }
+  }
 }
 
 // меню бургер

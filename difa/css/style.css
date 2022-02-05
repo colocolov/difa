@@ -369,14 +369,6 @@ input {
     -ms-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
   }
-  .menu__item:hover .menu__arrow {
-    -webkit-transform: rotate(-180deg);
-    -ms-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-  }
-  .menu__item:hover .menu__arrow {
-    color: #fbb03b;
-  }
 }
 @media (min-width: 768px) {
   .menu__item._hover .sub-menu {
@@ -386,11 +378,6 @@ input {
     -webkit-transform: translate(0px, 0px);
     -ms-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
-  }
-  .menu__item._hover .menu__arrow {
-    -webkit-transform: rotate(-180deg);
-    -ms-transform: rotate(-180deg);
-    transform: rotate(-180deg);
   }
 }
 @media (max-width: 768px) {
@@ -404,8 +391,11 @@ input {
     margin-bottom: 10px;
   }
 }
-.menu__arrow {
-  margin-left: 4px;
+.menu__arrow::after {
+  content: "";
+  position: absolute;
+  right: -14px;
+  top: 5px;
   width: 12px;
   height: 12px;
   border: none;
@@ -419,9 +409,12 @@ input {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 @media (max-width: 768px) {
-  .menu__arrow {
+  .menu__arrow::after {
     display: none;
   }
 }
@@ -480,6 +473,30 @@ input {
   transform: rotate(45deg);
 }
 
+@media (min-width: 768px) {
+  .menu__arrow:hover::after {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  ._hover.menu__arrow::after {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+}
+@media (any-hover: hover) {
+  ._hover.menu__arrow::after {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  .menu__arrow:hover::after {
+    color: #fbb03b;
+  }
+}
 .sub-menu {
   position: relative;
   -webkit-box-flex: 1;
@@ -538,7 +555,7 @@ input {
 .main-slider {
   position: relative;
   height: 100vh;
-  min-height: 580px;
+  min-height: 680px;
   max-height: 800px;
   background-color: #000000;
   color: #ffffff;
@@ -554,6 +571,13 @@ input {
   justify-content: center;
   width: 100%;
   padding-top: 314px;
+}
+.main-slider__aside {
+  position: relative;
+  left: 15px;
+}
+.main-slider__aside .slider-aside {
+  bottom: 67px;
 }
 .main-slider__slide {
   display: -webkit-box;
@@ -626,14 +650,12 @@ input {
   align-items: flex-end;
   bottom: 0;
   left: 0;
-  width: 321px;
-  height: 800px;
   z-index: 2;
 }
 .slider-aside--contact {
-  top: -265px;
-  left: 16px;
-  width: 30px;
+  top: 27px;
+  bottom: auto;
+  left: 15px;
 }
 .slider-aside__content {
   display: -webkit-box;
@@ -649,8 +671,7 @@ input {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 542px;
-  margin-left: 71px;
+  height: 516px;
   margin-bottom: 40px;
   z-index: 3;
 }
@@ -660,7 +681,7 @@ input {
 }
 .slider-aside__divider {
   width: 1px;
-  height: 100px;
+  height: 75px;
   background-color: #fbb03b;
 }
 .slider-aside__text {
@@ -946,7 +967,6 @@ input {
 }
 .page-hero__wrapper .slider-aside {
   bottom: -38px;
-  left: -63px;
 }
 .page-hero__head {
   margin-right: 51px;
@@ -1002,11 +1022,6 @@ input {
   -ms-transform: translateY(-42%);
   transform: translateY(-42%);
 }
-.page-hero--interior::before {
-  background: -o-linear-gradient(342.85deg, #000000 7.04%, rgba(0, 0, 0, 0.5) 100%);
-  background: linear-gradient(107.15deg, #000000 7.04%, rgba(0, 0, 0, 0.5) 100%);
-}
-
 .page__section {
   padding-top: 110px;
   padding-bottom: 80px;
@@ -1764,10 +1779,6 @@ input {
     left: 0px;
   }
 
-  .slider-aside__content {
-    margin-left: 30px;
-  }
-
   .mini-slider__slider-wrapper {
     width: 730px;
   }
@@ -1800,10 +1811,6 @@ input {
 
   .main-slider__btn-next {
     right: 5%;
-  }
-
-  .slider-aside__content {
-    margin-left: 15px;
   }
 
   .main-slider__slide::before {
@@ -2035,6 +2042,11 @@ input {
   .portfolio-head__btn {
     font-size: 14px;
     padding: 12px 23px;
+  }
+
+  .contact__head {
+    font-size: 88px;
+    line-height: 120%;
   }
 
   .contact__data-wrap-data {

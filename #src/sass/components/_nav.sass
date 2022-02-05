@@ -60,10 +60,6 @@
           visibility: visible
           pointer-events: auto
           transform: translate(0px, 0px)
-        .menu__arrow
-          transform: rotate(-180deg)
-        .menu__arrow
-          color: $orange
     @media (min-width: 768px)
       &._hover
         .sub-menu
@@ -71,8 +67,6 @@
           visibility: visible
           pointer-events: auto
           transform: translate(0px, 0px)
-        .menu__arrow
-          transform: rotate(-180deg)
     @media (max-width: 768px)
       margin-bottom: 40px
       font-weight: 400
@@ -81,9 +75,11 @@
         margin-right: 0
         margin-bottom: 10px
 
-  &__arrow
-    margin-left: 4px
-    // margin-top: -10px
+  &__arrow::after
+    content: ""
+    position: absolute
+    right: -14px
+    top: 5px
     width: 12px
     height: 12px
     border: none
@@ -95,7 +91,7 @@
     cursor: pointer
     outline: none
     transition: all 0.3s ease-in-out
-    // transform: rotate(90deg)
+    transform: rotate(0deg)
     @media (max-width: 768px)
       display: none
 
@@ -136,6 +132,17 @@
         &:last-child
           top: calc( 50% - 3px )
           transform: rotate(45deg)
+
+@media (min-width: 768px)
+  .menu__arrow:hover::after
+    transform: rotate(-180deg)
+  ._hover.menu__arrow::after
+    transform: rotate(-180deg)
+@media (any-hover: hover)
+  ._hover.menu__arrow::after
+    transform: rotate(-180deg)
+  .menu__arrow:hover::after
+    color: $orange
 
 .sub-menu
   position: relative
