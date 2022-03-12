@@ -1,33 +1,69 @@
 .mini-slider
+  position: relative
   padding-top: 133px
   padding-bottom: 100px
   background-color: $black
+  // background-image: url(../images/bg/about-bg.png)
+  background-position: center bottom
+  background-repeat: no-repeat
+  background-size: cover
+  &::before
+    position: absolute
+    content: ''
+    // display: block
+    background-color: #000
+    top: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    opacity: 0.6
+    z-index: 1
   &__container
+    position: relative
     display: flex
     align-items: flex-start
     flex-wrap: wrap
+    justify-content: space-between
+    z-index: 5
 
+  &__left
+    display: flex
+    flex-direction: column
+    align-items: flex-start
   &__intro
     flex-shrink: 0
-    width: 311px
+    // width: 311px
     height: 513px
     margin-right: 55px
+    margin-bottom: 71px
     // margin-left: -7px
 
   &__slider
-    position: relative
-    width: 700px
-    height: 577px
-    background-color: $black
-    &-wrapper
-      position: absolute
-      top: 0
-      left: 0
-      width: 893px
-      height: 100%
-  &__slide
-    width: 893px
-    height: 577px
+    // position: relative
+    width: 490px
+    // height: 577px
+  &__list
+    // display: flex
+    // flex-direction: column
+  &__item
+    margin-bottom: 50px
+    border-bottom: 2px solid $orange
+    font-weight: 400
+    font-size: 26px
+    line-height: 37px
+    color: $white
+
+    // background-color: $black
+  //   &-wrapper
+  //     position: absolute
+  //     top: 0
+  //     left: 0
+  //     width: 893px
+  //     height: 100%
+  // &__slide
+  //   width: 893px
+  //   height: 577px
     // &::after
     //   content: ''
     //   position: absolute
@@ -61,5 +97,6 @@
       right: 50px
 
   &__button
+    display: block
     margin-top: 37px
     padding: 12px 74px 12px 42px
