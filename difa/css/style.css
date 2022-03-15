@@ -1589,9 +1589,9 @@ input {
   content: "";
   right: -14px;
   bottom: 11px;
-  border-radius: 50%;
   width: 7px;
   height: 7px;
+  border-radius: 50%;
   background-color: #fbb03b;
 }
 .page-about__btn {
@@ -2257,6 +2257,25 @@ input {
     height: 510px;
   }
 
+  .page-about__item-left {
+    margin-right: 70px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .page-about__item-right {
+    width: 100%;
+  }
+
+  .page-about__content p,
+.page-about__item-right p {
+    font-size: 22px;
+  }
+
+  .page-about__content p:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
   .footer {
     padding-top: 80px;
   }
@@ -2675,6 +2694,19 @@ input {
     height: 450px;
   }
 
+  .page-about__item-left {
+    margin-right: 45px;
+  }
+
+  .page-about__content p,
+.page-about__item-right p {
+    font-size: 18px;
+  }
+
+  .page-about__content p:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
   .error-404__head {
     font-size: 160px;
   }
@@ -2837,6 +2869,24 @@ input {
 
   .contact__location {
     height: 400px;
+  }
+
+  .page-about__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .page-about__item-left {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .page-about__spec-wrap {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .error-404__text {
