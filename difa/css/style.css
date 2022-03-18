@@ -566,11 +566,17 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   width: 100%;
   padding-top: 314px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 .main-slider__aside {
   position: relative;
@@ -586,6 +592,17 @@ input {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.main-slider__button {
+  width: 270px;
+  margin-top: 30px;
+  padding: 12px 46px 12px 40px;
+  font-size: 20px;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.main-slider__button::before {
+  right: 33px;
 }
 .main-slider__head {
   position: relative;
@@ -1886,6 +1903,10 @@ input {
     fill: #fbb03b;
   }
 
+  .main-slider__button:hover::before {
+    right: 22px;
+  }
+
   .social__icon:hover {
     fill: #fbb03b;
   }
@@ -1950,12 +1971,6 @@ input {
     -webkit-transform: translateX(-40px);
     -ms-transform: translateX(-40px);
     transform: translateX(-40px);
-  }
-
-  .main-slider__container {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 
   .main-slider__head {
@@ -2450,6 +2465,13 @@ input {
     padding-top: 196px;
   }
 
+  .main-slider__button {
+    margin-top: 20px;
+    padding: 12px 30px 12px 30px;
+    width: auto;
+    font-size: 18px;
+  }
+
   .main-slider__head {
     max-width: 54%;
     font-size: 36px;
@@ -2867,10 +2889,9 @@ input {
 
   .page-hero__btn {
     display: inline-block;
-    margin-bottom: 20px;
   }
   .page-hero__btn--reparatie {
-    margin-top: 30px;
+    margin-top: 0px;
   }
 
   .portfolio-head__undertitle {
@@ -3044,13 +3065,16 @@ input {
   }
 
   .page-hero__head {
-    margin-left: 50px;
+    margin-left: 10px;
   }
   .page-hero__head--reparatie {
-    margin-left: 0;
+    margin-left: 10px;
   }
 
   .page-hero__content {
+    margin-left: 10px;
+  }
+  .page-hero__content p {
     display: none;
     opacity: 0;
     visibility: hidden;
