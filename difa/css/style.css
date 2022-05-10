@@ -925,6 +925,10 @@ input {
   margin-right: 55px;
   margin-bottom: 71px;
 }
+.mini-slider__intro img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
 .mini-slider__slider {
   width: 490px;
 }
