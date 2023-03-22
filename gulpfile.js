@@ -101,14 +101,14 @@ function css() {
         outputStyle: "expanded",
       })
     )
+    .pipe(sourcemaps.write("."))
+    .pipe(dest(path.build.css))
+    .pipe(cleancss())
     .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 5 versions"],
-        grid: true,
-        cascade: false,
+      rename({
+        extname: ".min.css",
       })
     )
-    .pipe(sourcemaps.write("."))
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream());
 }
