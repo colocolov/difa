@@ -84,6 +84,13 @@ a {
 }
 @font-face {
   font-family: "NoeDisplay";
+  src: url("../fonts/NoeDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NoeDisplay";
   src: url("../fonts/NoeDisplay-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
@@ -176,6 +183,7 @@ input {
   font-size: 30px;
   line-height: 160%;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: #000000;
   background-color: #fbb03b;
   border-radius: 100px;
@@ -201,6 +209,12 @@ input {
   width: 0;
   height: 0;
   overflow: hidden;
+}
+
+.grecaptcha-badge {
+  z-index: -10;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .header {
@@ -727,6 +741,80 @@ input {
 .main-about__btn {
   height: 80px;
   padding: 15px 76px 15px 52px;
+}
+
+.main-servicii {
+  position: relative;
+  padding-top: 119px;
+  padding-bottom: 125px;
+  background-color: #000000;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-servicii::before {
+  position: absolute;
+  content: "";
+  background-color: #000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+.main-servicii__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  max-width: 1135px;
+}
+.main-servicii__container h2 {
+  font-size: 55px;
+  font-family: "NoeDisplay", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 62px;
+}
+.main-servicii__container h2 span {
+  color: #fbb03b;
+}
+.main-servicii__info {
+  display: grid;
+  grid-template-columns: 32.941176% 26.877828% 27.330317%;
+  column-gap: 70px;
+}
+.main-servicii__item {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.main-servicii__name {
+  margin-bottom: 26px;
+  color: #c4c4c4;
+  font-size: 26px;
+}
+.main-servicii__price {
+  color: #ffffff;
+  font-size: 76px;
+  font-weight: 400;
+  font-family: "NoeDisplay", sans-serif;
+}
+.main-servicii__price span {
+  font-size: 42px;
+  font-family: "Gilroy", sans-serif;
+  padding-left: 7px;
+}
+.main-servicii__button {
+  align-self: end;
+  margin-bottom: 60px;
+  padding: 16px 60px 16px 32px;
+  justify-self: end;
+  font-size: 20px;
+}
+.main-servicii__button::before {
+  top: 46%;
+  right: 28px;
 }
 
 .mini-slider {
@@ -1592,6 +1680,10 @@ input {
 
   .mini-slider__btn-fill:hover {
     fill: #fbb03b;
+  }
+
+  .main-servicii__button:hover::before {
+    right: 22px;
   }
 
   .page-hero__btn:hover::before {
