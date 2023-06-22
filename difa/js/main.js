@@ -1,18 +1,59 @@
-// accordeon
-// document.addEventListener("DOMContentLoaded", () => {
-//   const accordeons = document.querySelectorAll(".accordeon__item");
+// scroll
+const findMe = document.querySelector(".main-servicii");
+if (findMe) {
 
-//   accordeons.forEach((el) => {
-//     el.addEventListener("click", (e) => {
-//       const self = e.currentTarget;
-//       const title = self.querySelector(".accordeon__name");
-//       const content = self.querySelector(".accordeon__decription");
+  let eventStatus = false;
 
-//       self.classList.toggle("active");
-//     });
-//   });
-// });
-// ----- END
+  const isInViewport = function (elem) {
+    const distance = elem.getBoundingClientRect();
+    // console.log(distance.top);
+    return (
+      distance.top >= 0 &&
+      distance.left >= 0 &&
+      distance.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+      distance.right <=
+      (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
+
+  window.addEventListener(
+    "scroll",
+    function (e) {
+      if (isInViewport(findMe)) {
+        // console.log('i see');
+        if (!eventStatus) {
+          // animate count scriprt
+          const dataCounters = document.querySelectorAll(".main-servicii__count");
+          // let interval = 1500;
+
+          dataCounters.forEach((item) => {
+            // console.log(item);
+            let interval = parseInt(item.getAttribute("data-time")) * 500;
+            let startValue = parseInt(item.getAttribute("data-min"));
+            let endValue = parseInt(item.getAttribute("data-max"));
+            let duration = Math.floor(interval / (endValue - startValue));
+            // let duration = parseInt(item.getAttribute("data-time")) * 100;
+            // let duration = Math.floor(interval / endValue);
+            // console.log(duration);
+
+            let counter = setInterval(function () {
+              startValue += 1;
+              item.textContent = startValue;
+              if (startValue == endValue) {
+                clearInterval(counter);
+              }
+            }, duration);
+
+          });
+          eventStatus = true;
+        }
+      }
+    },
+    false
+  );
+
+}
 
 "use strict";
 
@@ -315,56 +356,40 @@ menuLink.addEventListener("click", function (e) {
   menuBody.classList.remove("_active");
 });
 
-var portfolioSliderThumb = new Swiper(".portfolio-slider--thumb", {
-  // loop: true,
-  spaceBetween: 57,
-  slidesPerView: 4,
-  // slidesPerGroup: 4,
-  freeMode: true,
-  // watchSlidesProgress: true,
-  navigation: {
-    nextEl: ".portfolio-slider__btn-thumb-next",
-    prevEl: ".portfolio-slider__btn-thumb-prev",
-    clickable: true,
-  },
-});
-var portfolioSliderPreview = new Swiper(".portfolio-slider--preview", {
-  // loop: true,
-  slidesPerView: 1,
-  slideToClickedSlide: true,
-  // spaceBetween: 10,
-  speed: 800,
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
-  navigation: {
-    nextEl: ".portfolio-slider__btn-next",
-    prevEl: ".portfolio-slider__btn-prev",
-    clickable: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  thumbs: {
-    swiper: portfolioSliderThumb,
-  },
-});
-
-// слайдер отзывов
-// var reviewsSlider = new Swiper(".reviews__sliders", {
-//   loop: true,
+// var portfolioSliderThumb = new Swiper(".portfolio-slider--thumb", {
+//   // loop: true,
+//   spaceBetween: 57,
+//   slidesPerView: 4,
+//   // slidesPerGroup: 4,
+//   freeMode: true,
+//   // watchSlidesProgress: true,
 //   navigation: {
-//     nextEl: ".reviews-button--right",
-//     prevEl: ".reviews-button--left",
+//     nextEl: ".portfolio-slider__btn-thumb-next",
+//     prevEl: ".portfolio-slider__btn-thumb-prev",
+//     clickable: true,
+//   },
+// });
+// var portfolioSliderPreview = new Swiper(".portfolio-slider--preview", {
+//   // loop: true,
+//   slidesPerView: 1,
+//   slideToClickedSlide: true,
+//   // spaceBetween: 10,
+//   speed: 800,
+//   effect: "fade",
+//   fadeEffect: {
+//     crossFade: true,
+//   },
+//   navigation: {
+//     nextEl: ".portfolio-slider__btn-next",
+//     prevEl: ".portfolio-slider__btn-prev",
 //     clickable: true,
 //   },
 //   pagination: {
 //     el: ".swiper-pagination",
-//     type: "bullets",
-//     clickable: true,
+//   },
+//   thumbs: {
+//     swiper: portfolioSliderThumb,
 //   },
 // });
-//----- END
 
 //# sourceMappingURL=main.js.map
