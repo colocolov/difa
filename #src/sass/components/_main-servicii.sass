@@ -17,58 +17,107 @@
     width: 100%
     height: 100%
     opacity: 0.6
+  @media (max-width: 576px)
+    padding-top: 80px
+    padding-bottom: 80px
 
   &__container
     position: relative
     display: flex
     flex-direction: column
-    z-index: 2
     max-width: 1135px
+    z-index: 2
     h2
-      font-size: 55px
+      margin-bottom: 62px
       font-family: "NoeDisplay", sans-serif
       font-weight: 700
+      font-size: 55px
+      line-height: 1.27
       color: $white
-      margin-bottom: 62px
       span
         color: $orange
+      @media (max-width: 768px)
+        font-size: 42px
+      @media (max-width: 480px)
+        font-size: 36px
+        margin-bottom: 35px
+
 
   &__info
-    // display: flex
+    display: flex
     // justify-content: space-between
-    // flex-wrap: wrap
+    flex-wrap: wrap
     //
-    display: grid
-    grid-template-columns: 32.941176% 26.877828% 27.330317%
+    // display: grid
+    // grid-template-columns: 32.941176% 26.877828% 27.330317%
     // grid-template-columns: repeat(3, 1fr)
-    column-gap: 70px
-    // column-gap: 35px
+    // column-gap: 70px
+    column-gap: 50px
+    @media (max-width: 768px)
+      flex-direction: column
+    @media (max-width: 1080px)
+      // grid-template-columns: repeat(2, 1fr)
+
   &__item
+    flex: 1 1 29.33%
     margin-top: 60px
     margin-bottom: 60px
+    @media (min-width: 480px)
+      min-width: 320px
+      &:last-child
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin-bottom: -3px
+    @media (max-width: 768px)
+      margin-top: 30px
+      margin-bottom: 30px
+
   &__name
     margin-bottom: 26px
-    color: $light-grey
     font-size: 26px
+    color: $light-grey
+    @media (max-width: 768px)
+      font-size: 20px
+      margin-bottom: 10px
   &__price
-    color: $white
-    font-size: 76px
-    font-weight: 400
     font-family: "NoeDisplay", sans-serif
+    font-weight: 400
+    font-size: 70px
+    color: $white
+    display: flex
+    align-items: end
+    @media (max-width: 768px)
+      font-size: 52px
+    @media (max-width: 480px)
+      font-size: 42px
+
+  &__count
+    // line-height: 1.6
+    margin-left: 12px
   &__curency
-    font-size: 42px
+    display: inline-block
+    margin-left: 7px
+    margin-bottom: -10px
+    // padding-left: 7px
     font-family: "Gilroy", sans-serif
-    padding-left: 7px
+    font-size: 42px
+    // line-height: 1.6
+    @media (max-width: 768px)
+      font-size: 36px
+      margin-bottom: -7px
+    @media (max-width: 480px)
+      margin-bottom: -3px
 
   &__button
-    align-self: end
-    margin-bottom: 60px
+    // flex: 1 1 29.33%
+    // align-self: end
+    // justify-self: end
+    // margin-bottom: 60px
     padding: 16px 60px 16px 32px
-    justify-self: end
     font-size: 20px
-    // text-transform: uppercase
     &::before
-      top: 46%
-      right: 28px
-
+      right: 42px
+    @media (max-width: 768px)
+      margin-bottom: 0
 
