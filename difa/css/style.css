@@ -178,10 +178,12 @@ input {
 
 .button {
   position: relative;
+  display: inline-block;
+  padding: 18px 44px 18px 32px;
   font-family: "Gilroy", sans-serif;
   font-weight: 800;
   font-size: 20px;
-  line-height: 160%;
+  line-height: 100%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #000000;
@@ -192,11 +194,11 @@ input {
 .button::before {
   content: "";
   position: absolute;
-  top: 46%;
-  right: 56px;
+  top: 50%;
+  right: 24px;
   width: 12px;
   height: 16px;
-  transform: translateY(-33%);
+  transform: translateY(-50%);
   background-image: url(../images/icons/sprite.svg#arrow-btn);
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -221,8 +223,8 @@ input {
   position: absolute;
   top: 0;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #ffffff;
   z-index: 100;
 }
@@ -378,7 +380,7 @@ input {
     display: block;
     flex: 0 0 32px;
     width: 32px;
-    height: 29px;
+    height: 25px;
     border: none;
     background-color: transparent;
     outline: none;
@@ -388,10 +390,10 @@ input {
 }
 .menu__icon span {
   position: absolute;
-  top: calc(50% - 3px);
+  top: calc(50% - 2px);
   left: 0;
   width: 100%;
-  height: 6px;
+  height: 3px;
   background-color: #fff;
   transition: all 0.3s ease 0s;
 }
@@ -400,7 +402,7 @@ input {
 }
 .menu__icon span:last-child {
   top: auto;
-  bottom: 0;
+  bottom: 1px;
 }
 .menu__icon._active span {
   transform: scale(0);
@@ -457,6 +459,9 @@ input {
     background-color: transparent;
     margin-top: 20px;
     padding-left: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 .sub-menu li {
@@ -513,15 +518,8 @@ input {
   background-size: cover;
 }
 .main-slider__button {
-  width: 270px;
+  max-width: 270px;
   margin-top: 30px;
-  padding: 12px 46px 12px 40px;
-  font-size: 20px;
-  line-height: 110%;
-  text-transform: uppercase;
-}
-.main-slider__button::before {
-  right: 33px;
 }
 .main-slider__head {
   position: relative;
@@ -742,11 +740,6 @@ input {
 .main-about__wrap-btn {
   padding-top: 21px;
 }
-.main-about__btn {
-  height: 80px;
-  padding: 15px 76px 15px 52px;
-}
-
 .main-servicii {
   position: relative;
   padding-top: 119px;
@@ -849,6 +842,7 @@ input {
   font-family: "NoeDisplay", sans-serif;
   font-weight: 400;
   font-size: 70px;
+  line-height: 1;
   color: #ffffff;
   display: flex;
   align-items: end;
@@ -864,32 +858,20 @@ input {
   }
 }
 .main-servicii__count {
+  line-height: 1;
   margin-left: 12px;
 }
 .main-servicii__curency {
   display: inline-block;
   margin-left: 7px;
-  margin-bottom: -10px;
+  margin-bottom: 2px;
   font-family: "Gilroy", sans-serif;
   font-size: 42px;
 }
 @media (max-width: 768px) {
   .main-servicii__curency {
     font-size: 36px;
-    margin-bottom: -7px;
   }
-}
-@media (max-width: 480px) {
-  .main-servicii__curency {
-    margin-bottom: -3px;
-  }
-}
-.main-servicii__button {
-  padding: 16px 60px 16px 32px;
-  font-size: 20px;
-}
-.main-servicii__button::before {
-  right: 42px;
 }
 @media (max-width: 768px) {
   .main-servicii__button {
@@ -1057,14 +1039,6 @@ input {
 }
 .page-hero__content p span {
   color: #fbb03b;
-}
-.page-hero__btn {
-  padding: 12px 40px 12px 23px;
-  line-height: 1;
-}
-.page-hero__btn::before {
-  right: 24px;
-  transform: translateY(-35%);
 }
 .page-hero__btn--reparatie {
   display: inline-block;
@@ -1386,17 +1360,7 @@ input {
   border-radius: 3px;
 }
 .contact__button {
-  padding: 6px 19px;
-  width: 160px;
   font-weight: 800;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
-}
-.contact__button::before {
-  top: 45%;
-  right: 38px;
-  width: 11px;
-  height: 16px;
 }
 .contact__button--call {
   display: none;
@@ -1524,11 +1488,7 @@ input {
 }
 .page-about__btn {
   font-weight: 800;
-  font-size: 16px;
-  line-height: 160%;
   color: #ffffff;
-  text-transform: uppercase;
-  padding: 8px 37px;
 }
 .page-about__btn::before {
   display: none;
@@ -1732,7 +1692,7 @@ input {
 
 @media (min-width: 992px) {
   .button:hover::before {
-    right: 46px;
+    right: 19px;
   }
 
   .button:hover {
@@ -1747,24 +1707,12 @@ input {
     fill: #fbb03b;
   }
 
-  .main-slider__button:hover::before {
-    right: 22px;
-  }
-
   .social__icon:hover {
     fill: #fbb03b;
   }
 
   .mini-slider__btn-fill:hover {
     fill: #fbb03b;
-  }
-
-  .main-servicii__button:hover::before {
-    right: 32px;
-  }
-
-  .page-hero__btn:hover::before {
-    right: 18px;
   }
 
   .page__work:hover .page__photo {
@@ -1775,20 +1723,12 @@ input {
     color: #fbb03b;
   }
 
-  .portfolio-head__btn:hover::before {
-    right: 18px;
-  }
-
   .portfolio-slider__btn-fill:hover {
     fill: #fbb03b;
   }
 
   .contact__data-contact a:hover {
     color: #fbb03b;
-  }
-
-  .contact__button:hover::before {
-    right: 30px;
   }
 
   .error-404__btn:hover {
@@ -2036,11 +1976,6 @@ input {
     margin-bottom: 40px;
   }
 
-  .mini-slider__button {
-    margin-left: 8%;
-    padding: 10px 35px;
-  }
-
   .page-hero__wrapper {
     padding-left: 11%;
   }
@@ -2235,7 +2170,7 @@ input {
   .main-slider {
     max-height: 590px;
     min-height: auto;
-    padding-top: 101px;
+    padding-top: 81px;
     padding-bottom: 116px;
   }
   .main-slider::before {
@@ -2260,9 +2195,9 @@ input {
 
   .main-slider__button {
     margin-top: 20px;
-    padding: 12px 30px 12px 30px;
+    padding: 12px 30px;
     width: auto;
-    font-size: 18px;
+    max-width: none;
   }
 
   .main-slider__head {
@@ -2550,7 +2485,8 @@ input {
 
   .main-about__spec-wrap {
     width: auto;
-    max-width: 110px;
+    max-width: 165px;
+    flex: 1 1 46%;
   }
 
   .main-about__spec-wrap::before {
@@ -2573,14 +2509,6 @@ input {
   }
   .main-about__spec-icon--repair {
     width: 40px;
-  }
-
-  .main-about__spec-title {
-    font-size: 15px;
-  }
-
-  .main-about__spec-text {
-    font-size: 13px;
   }
 
   .mini-slider {
@@ -2741,7 +2669,9 @@ input {
   .main-about__spec-wrap {
     margin-right: 10px;
     margin-bottom: 30px;
-    max-width: 94px;
+    max-width: none;
+    min-width: 155px;
+    align-items: center;
   }
 
   .main-about__spec-icon {
@@ -2759,10 +2689,6 @@ input {
   }
   .main-about__spec-icon--repair {
     width: 26px;
-  }
-
-  .main-about__spec-title {
-    font-size: 13px;
   }
 
   .mini-slider {
