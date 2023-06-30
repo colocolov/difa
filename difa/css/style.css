@@ -1161,17 +1161,6 @@ input {
   font-size: 32px;
   font-weight: 400;
 }
-.portfolio-head__btn {
-  padding: 12px 40px 12px 23px;
-  line-height: 1;
-}
-.portfolio-head__btn::before {
-  width: 12px;
-  height: 16px;
-  right: 24px;
-  transform: translateY(-35%);
-}
-
 .portfolio {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1360,7 +1349,7 @@ input {
   border-radius: 3px;
 }
 .contact__button {
-  font-weight: 800;
+  padding: 18px 32px;
 }
 .contact__button--call {
   display: none;

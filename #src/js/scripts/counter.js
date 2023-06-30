@@ -2,16 +2,16 @@
 const findMe = document.querySelector(".main-servicii");
 if (findMe) {
 
-  let eventStatus = false;
+  // let eventStatus = false;
 
   const isInViewport = function (elem) {
     const distance = elem.getBoundingClientRect(); // оригинал
     // console.log(elem.getBoundingClientRect());
-    console.log("Top - " + distance.top);
+    // console.log("Top - " + distance.top);
     // console.log("Left - " + distance.left);
     // console.log("Right - " + distance.right);
     // console.log("Bottom - " + distance.bottom);
-    console.log(elem.clientHeight * 0.334);
+    // console.log(elem.clientHeight * 0.334);
     // console.log(distance.top + document.documentElement.clientHeight);
     return (
       distance.top <= (elem.clientHeight * 0.334)
@@ -24,12 +24,12 @@ if (findMe) {
       );
   };
 
-  function onScroll() {
+  window.addEventListener('scroll', function(event) {
     // console.log(isInViewport(findMe));
     if (isInViewport(findMe)) {
       // console.log(isInViewport(findMe));
       // console.log('i see');
-      if (!eventStatus) {
+      // if (!eventStatus) {
         // animate count scriprt
         const dataCounters = document.querySelectorAll(".main-servicii__count");
         // let interval = 1500;
@@ -53,13 +53,13 @@ if (findMe) {
           }, duration);
 
         });
-        eventStatus = true;
-      }
+      //   eventStatus = true;
+      // }
     }
-  };
+  }, false);
 
-  window.addEventListener("scroll", onScroll);
-  document.body.addEventListener("touchmove", onScroll);
+  // window.addEventListener("scroll", onScroll);
+  // document.body.addEventListener("touchmove", onScroll);
 
 
   // function onEntry(entry) {
