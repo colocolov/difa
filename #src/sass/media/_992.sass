@@ -7,16 +7,25 @@
     &::before
       display: none
 
-  .header__container
-    flex-wrap: wrap
-  .header__link--phone
-    margin-left: 30px
-    margin-left: auto
-    order: 3
   .menu
-    margin-left: 30px
-  .menu__item:not(:last-child)
-    margin-right: 36px
+    max-width: 78.77%
+  .menu__list
+    justify-content: flex-end
+  .menu__item
+    &.menu__arrow
+      width: 100%
+      justify-content: flex-end
+      order: 1
+    &:not(:last-child)
+      order: 2
+      margin-right: 0
+      margin-left: 36px
+  .sub-menu
+    right: 0
+    left: auto
+    & .menu__item
+      margin-left: 0
+
   .main-slider
     max-height: 602px
   .main-slider__container

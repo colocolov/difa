@@ -267,9 +267,9 @@ input {
     bottom: 0;
     right: -100%;
     width: 100%;
-    padding: 150px 30px 50px 70px;
+    padding: 120px 30px 50px 70px;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.98);
     transition: right 0.5s ease 0s;
   }
   .menu__body::before {
@@ -279,7 +279,7 @@ input {
     height: 116px;
     top: 0;
     right: -100%;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.98);
     z-index: 2;
     transition: right 0.5s ease 0s;
   }
@@ -319,7 +319,7 @@ input {
   transition: color 0.3s ease-in-out;
 }
 .menu__item:not(:last-child) {
-  margin-right: 39px;
+  margin-right: 32px;
 }
 @media (any-hover: hover) {
   .menu__item:hover .sub-menu {
@@ -1005,6 +1005,9 @@ input {
 .page-hero__head--mobilier::after {
   bottom: 16px;
   right: -34px;
+}
+.page-hero__head--mobilier img {
+  object-fit: contain;
 }
 .page-hero__head--arhitectura {
   margin-right: 88px;
@@ -1783,6 +1786,23 @@ input {
   }
 }
 @media (max-width: 1100px) {
+  .header__container {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    margin-left: 30px;
+    margin-right: 15px;
+  }
+
+  .header__link--phone {
+    margin-left: 30px;
+    margin-left: auto;
+    order: 3;
+    width: 50%;
+    text-align: right;
+  }
+
   .header__link--logo-index {
     transform: none;
   }
@@ -1856,22 +1876,31 @@ input {
     display: none;
   }
 
-  .header__container {
-    flex-wrap: wrap;
-  }
-
-  .header__link--phone {
-    margin-left: 30px;
-    margin-left: auto;
-    order: 3;
-  }
-
   .menu {
-    margin-left: 30px;
+    max-width: 78.77%;
   }
 
+  .menu__list {
+    justify-content: flex-end;
+  }
+
+  .menu__item.menu__arrow {
+    width: 100%;
+    justify-content: flex-end;
+    order: 1;
+  }
   .menu__item:not(:last-child) {
-    margin-right: 36px;
+    order: 2;
+    margin-right: 0;
+    margin-left: 36px;
+  }
+
+  .sub-menu {
+    right: 0;
+    left: auto;
+  }
+  .sub-menu .menu__item {
+    margin-left: 0;
   }
 
   .main-slider {
@@ -2131,8 +2160,40 @@ input {
   }
   .header__link--phone {
     display: block;
+    width: auto;
     margin-bottom: 40px;
     font-size: 18px;
+    text-align: unset;
+    order: 3;
+  }
+
+  .menu__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu__list {
+    margin-bottom: 60px;
+    order: 2;
+  }
+
+  .menu__item {
+    margin-right: 0;
+    margin-left: 3px;
+    margin-bottom: 10px;
+  }
+  .menu__item:not(:last-child) {
+    order: 1;
+    margin-left: 3px;
+  }
+
+  .sub-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .sub-menu li {
+    margin-bottom: 7px;
   }
 
   .slider-aside {
@@ -2144,6 +2205,7 @@ input {
   .slider-aside__list {
     display: flex;
     align-items: center;
+    order: 4;
   }
 
   .slider-aside__item:not(:last-child) {
