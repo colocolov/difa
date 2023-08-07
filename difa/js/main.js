@@ -1,5 +1,5 @@
 // scroll
-const findMe = document.querySelector(".main-servicii");
+const findMe = document.querySelector(".main-servicii22");
 if (findMe) {
 
   // let eventStatus = false;
@@ -78,12 +78,7 @@ if (findMe) {
   //   observer.observe(elm);
   // }
 
-
-
-
-
 }
-
 "use strict";
 
 function DynamicAdapt(type) {

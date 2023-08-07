@@ -1,5 +1,5 @@
 // scroll
-const findMe = document.querySelector(".main-servicii");
+const findMe = document.querySelector(".main-servicii22");
 if (findMe) {
 
   // let eventStatus = false;
@@ -77,9 +77,5 @@ if (findMe) {
   // for (let elm of elements) {
   //   observer.observe(elm);
   // }
-
-
-
-
 
 }
