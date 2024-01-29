@@ -275,7 +275,7 @@ const da = new DynamicAdapt("max");
 da.init();
 
 // слайдер на главной
-const headerSlider = new Swiper(".main-slider", {
+const headerSlider = new Swiper(".main-slider__slider", {
   loop: true,
   autoplay: {
     delay: 5000,

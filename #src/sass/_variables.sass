@@ -7,14 +7,32 @@ $orange: #fbb03b
 $black: #000000
 $white: #ffffff
 
+$bgc2: #EDEDEC
+
+// переменные по умолчанию
+$containerPadding: 15
+$contentWidth: 1360
+$containerWidth: $contentWidth + $containerPadding * 2
+$minWidth: 320
+
+// Media 
+$pc: 1023.98px // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: 991.98px // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98px // Телефоны L - 768px
+$mobileMid: 575.98px // Телефоны M - 576px
+$mobileSmall: 479.98px // Телефоны S - 480px
+
+
 %body
   font-family: 'Gilroy', sans-serif
   font-weight: 400
-  font-size: 26px
-  line-height: 160%
+  font-size: 18px
+  line-height: 1.1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
 %head
-  font-family: 'NoeDisplay', sans-serif
-  font-weight: 700
-  font-size: 55px
-  line-height: 70px
+  font-family: 'Gilroy', sans-serif
+  font-weight: 600
+  font-size: 60px
+  line-height: 1.1

@@ -4,6 +4,10 @@ body
   // заменить ниже на свои значения
   @extend %body
   color: $black
+  min-width: 320px
+  &._lock
+    overflow: hidden !important
+    height: 100% !important
 
 html,
 body
@@ -34,6 +38,11 @@ input
   max-width: 1105px
   margin: 0 auto
   padding: 0 15px
+
+[class*='__container']
+  max-width: $containerWidth + px
+  margin: 0 auto
+  padding: 0 $containerPadding + px
 
 .image
   width: 100%
