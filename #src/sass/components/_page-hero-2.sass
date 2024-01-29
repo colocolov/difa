@@ -1,0 +1,103 @@
+.page-hero
+  // position: relative
+  // min-height: 800px
+  padding-top: 40px
+  padding-bottom: 40px
+  background-color: $bgc2
+  color: $grey
+
+  &__container
+
+  &__wrapper
+    position: relative
+    display: flex
+    align-items: flex-end
+    // padding-left: 178px
+    // align-items: center
+    // .slider-aside
+    //   bottom: -38px
+      // left: -63px
+
+  &__head
+    // margin-top: -24px
+    margin-right: 51px
+    // width: 331px
+    height: 533px
+    &--mobilier
+      margin-right: 83px
+      &::before
+        top: 244px
+        right: 53px
+      &::after
+        bottom: 16px
+        right: -34px
+      img
+        object-fit: contain
+    &--arhitectura
+      // width: 399px
+      margin-right: 88px
+      &::before
+        top: 54px
+        right: 11px
+      &::after
+        bottom: 15px
+        right: -59px
+    &--reparatie,
+    &--repairs
+      margin-top: 117px
+      height: 407px
+      margin-right: 90px
+      & img
+        object-fit: contain
+
+  &__content
+    // position: relative
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-self: center
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 70px
+      height: 96px
+      background: url("../images/icons/sprite.svg#arrow-right") center / cover no-repeat
+      transform: rotate(90deg)
+    // max-width: 346px
+    // padding-top: 37px
+    p
+      max-width: 290px
+      font-weight: 500
+      font-size: 16px
+      line-height: 1.6
+      color: $dark
+      &:not(:last-child)
+        margin-bottom: 20px
+      span
+        color: $orange
+
+  &__name
+    width: 293px
+    margin-bottom: 60px
+
+  &__btn
+    // padding: 12px 40px 12px 23px
+    // font-size: 14px
+    // line-height: 1
+    &::before
+      // width: 12px
+      // height: 12px
+      // right: 24px
+      // transform: translateY(-35%)
+    &--reparatie
+      display: inline-block
+      width: 270px
+      margin-top: 284px
+      padding: 12px 46px 12px 40px
+      font-size: 20px
+      line-height: 110%
+      text-transform: uppercase
+
