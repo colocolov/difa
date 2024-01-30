@@ -28,9 +28,9 @@
     @include mediaTablet
       max-width: 250px
       height: auto
-    @include mediaPhone
+    @include mediaPhoneMid
       position: absolute
-      top: 50%
+      bottom: 19.11%
       @include adaptiveValue('left', 0, -15)
       max-width: none
       @include adaptiveValue('width', 200, 150)
@@ -81,14 +81,13 @@
       content: ''
       position: absolute
       bottom: 0px
-      right: 450px
-      width: 70px
+      right: 490px
+      width: 69px
       height: 96px
-      background: url("../images/icons/sprite.svg#arrow-right") center / cover no-repeat
+      background: url("../images/icons/sprite.svg#arrow-down") center / cover no-repeat
       transform: rotate(90deg)
       @include mediaTablet
         right: 50%
-        transform: translateX(-50%)
     // max-width: 346px
     // padding-top: 37px
     p
