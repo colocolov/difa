@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,17 +18,18 @@
   <title>Difa - Cine suntem</title>
 </head>
 
-  <body>
-    <div class="wrapper">
-      <header class="header">
+
+<body>
+  <div class="wrapper">
+    <header class="header">
   <div class="container header__container">
     <a class="header__link header__link--logo" href="index.html">
-      <img class="logo image" src="images/logo.svg" alt="Logo: Difa" />
-    </a>
+      <img class="logo image" src="images/logo-dark.svg" alt="Logo: Difa" />
+    </a><!-- /.logo -->
     <a
        data-da=".menu__body,768,1"
        href="tel:+37369592042"
-       class="header__link header__link--phone">+373 (69) 592042</a>
+       class="header__link header__link--phone">+373 (69) 592042</a><!-- /.header-phone -->
     <div class="header__menu menu">
       <nav class="menu__body">
         <ul class="menu__list">
@@ -37,9 +38,6 @@
           </li>
           <li class="menu__item">
             <a href="mobilier.html" class="menu__link">Mobilier</a>
-          </li>
-          <li class="menu__item">
-            <a href="mobilier.html" class="menu__link">Reparatie</a>
           </li>
           <li class="menu__item">
             <a href="arhitectura.html" class="menu__link">Arhitectura</a>
@@ -70,61 +68,44 @@
         <span></span>
         <span></span>
       </button>
-    </div>
+    </div><!-- /.menu -->
+    <ul class="header__social social" data-da=".menu__body,768,3">
+      <li class="social__item">
+        <a class="social__link" href="#">Viber</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">Instagram</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">Facebook</a>
+      </li>
+    </ul><!-- /.social-menu -->
   </div>
 </header> <section
-  class="page-about"
-  style="background-image: url(images/bg/about-bg.png)"
->
+         class="page-about"
+         style="background-image: url(images/bg/about-bg.png)">
   <div class="container">
     <div class="page-hero__wrapper">
       <div class="page-about__content">
         <h2><span>Cine</span> suntem?</h2>
         <p>
-          <span><strong>Salut!</strong></span> Suntem Difa - un birou de design, proiectare  și arhitectură! Oferim o gamă largă de servicii creative și strategice pentru mărci, companii, dar și pentru spații și locuințe personale.
+          <span><strong>Salut!</strong></span> Suntem Difa - un birou de design, proiectare și arhitectură! Oferim o
+          gamă largă de servicii creative și strategice pentru mărci, companii, dar și pentru spații și locuințe
+          personale.
         </p>
         <p>
-          DIFA oferă servicii de design interior + reparație la cheie, design mobilier, dar și arhitectură, proiectare și construcție.
+          DIFA oferă servicii de design interior + reparație la cheie, design mobilier, dar și arhitectură, proiectare
+          și construcție.
         </p>
         <p>
           <span>Te ghidăm în realizarea celor mai bune soluții și materializăm proiectul tău de vis în realitate!</span>
         </p>
       </div>
-      <aside class="slider-aside">
-  <div class="slider-aside__content">
-    <p class="slider-aside__text"><span>design & archtecture solution</span></p>
-    <div class="slider-aside__divider"></div>
-    <ul data-da=".menu__body,768,2" class="social slider-aside__list">
-      <li class="social__item slider-aside__item">
-        <a class="social__link" href="#" target="_blank">
-          <svg class="social__icon" aria-hidden="true">
-            <use xlink:href="images/icons/sprite.svg#viber"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item slider-aside__item">
-        <a class="social__link" href="#" target="_blank">
-          <svg class="social__icon" aria-hidden="true">
-            <use xlink:href="images/icons/sprite.svg#instagram"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item slider-aside__item">
-        <a class="social__link" href="#" target="_blank">
-          <svg class="social__icon" aria-hidden="true">
-            <use xlink:href="images/icons/sprite.svg#facebook"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </div>
-</aside>
 
     </div>
   </div>
 </section>
-
-      <main class="main"><section class="page-about__service">
+    <main class="main"><section class="page-about__service">
   <div class="container">
     <div class="page-about__wrap">
       <ul class="page-about__list">
@@ -232,7 +213,7 @@
   </div>
 </section>
 </main>
-      <footer class="footer">
+    <footer class="footer">
   <div class="container">
     <div class="footer__content">
       <h2 class="heading footer__head">Contacte</h2>
@@ -288,10 +269,11 @@
   </div>
 </footer>
 
-    </div>
+  </div>
 
-    <!-- подключение скриптов -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  <!-- подключение скриптов -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

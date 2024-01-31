@@ -7,17 +7,26 @@
   background-color: $bgc2
   color: $black
   border-bottom: 1px solid #C4C4C4
+  @include mediaPhone
+    border-bottom: 0
   // z-index: 100
   &__container
     display: flex
     align-items: flex-start
     justify-content: space-between
+    flex-wrap: wrap
+    @include mediaPhone
+      flex-direction: column
   &__link
     &--logo
       position: relative
       width: 117px
       height: 55px
       z-index: 5
+      @include mediaPhone
+        width: 88px
+        height: 41px
+        margin-bottom: 40px
       // left: 183px
       &-index
         // transform: translateX(calc(-3% - 116px))
@@ -35,12 +44,23 @@
       @media (any-hover: hover)
         &:hover
           color: $orange
+      @include mediaTablet
+        margin-left: auto
+        margin-bottom: 10px
+        // margin-top: 10px
+        order: 2
+        width: 50%
+        text-align: right
 
   &__social
     display: flex
     align-items: center
     justify-content: flex-end
-    margin-top: 30px
+    @include mediaTablet
+      order: 3
+    @include mediaPhone
+      flex-wrap: wrap
+      row-gap: 20px
     li
       position: relative
       transition: color 0.3s ease-in

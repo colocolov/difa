@@ -1,6 +1,10 @@
 .menu
   // margin-top: 6px
   margin-left: 50px
+  @media (max-width: 1100px)
+    margin-left: 30px
+  @include mediaPhone
+    margin-left: 0
   &__body
     display: flex
     margin-top: 0
@@ -15,7 +19,7 @@
       // height: 100%
       padding: 120px 30px 50px 70px
       overflow: auto
-      background-color: rgba($black,0.98)
+      background-color: $bgc2
       transition: right 0.5s ease 0s
       &::before
         position: fixed
@@ -24,7 +28,7 @@
         height: 116px
         top: 0
         right: -100%
-        background-color: rgba($black,0.98)
+        background-color: $bgc2
         z-index: 2
         transition: right 0.5s ease 0s
     &._active
@@ -37,7 +41,7 @@
     padding-right: 10px
     @media (max-width: 768px)
       flex-direction: column
-      align-items: flex-start
+      align-items: flex-end
       padding-right: 0
 
   &__item
@@ -55,6 +59,8 @@
     transition: color 0.3s ease-in-out
     &:not(:last-child)
       margin-right: 50px
+      @media screen and ( max-width: 1100px )
+        margin-right: 30px
     @media (any-hover: hover)
       &:hover
         .sub-menu
@@ -72,7 +78,7 @@
     @media (max-width: 768px)
       margin-bottom: 40px
       font-weight: 400
-      font-size: 18px
+      font-size: 22px
       &:not(:last-child)
         margin-right: 0
         margin-bottom: 10px
@@ -118,7 +124,7 @@
       left: 0
       width: 100%
       height: 3px
-      background-color: #fff
+      background-color: $dark
       transition: all 0.3s ease 0s
       &:first-child
         top: 0
@@ -126,6 +132,10 @@
         top: auto
         bottom: 1px
     &._active
+      position: absolute
+      top: 53px
+      right: 15px
+      transition: all 0.5s ease-in
       span
         transform: scale(0)
         &:first-child
@@ -145,6 +155,24 @@
     transform: rotate(-180deg)
   .menu__arrow:hover::after
     color: $orange
+@media screen and (max-width: 768px)
+  .menu__body._active
+    & .menu__arrow .menu__link
+      display: none
+      // @include hide
+    & .sub-menu
+      flex-direction: row
+      padding-right: 0
+      justify-content: flex-end
+      z-index: 0
+      li:not(:last-child)
+        margin-bottom: 0
+        margin-right: 20px
+      li
+        margin-bottom: 0
+        a
+          color: $dark
+
 
 .sub-menu
   position: relative
@@ -154,7 +182,7 @@
   z-index: 2
   @media ( min-width: 768px )
     position: absolute
-    left: 0
+    left: -17px
     top: 100%
     min-width: 50px
     opacity: 0
@@ -165,11 +193,12 @@
   @media ( max-width: 768px )
     position: relative
     background-color: transparent
-    margin-top: 20px
+    // margin-top: 20px
     padding-left: 0
     opacity: 1
     visibility: visible
     pointer-events: auto
+
   li
     line-height: 120%
     color: $black

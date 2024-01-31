@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ro">
-  @include('html/_head.html', { "title":"Difa - Cine suntem" })
-  <body>
-    <div class="wrapper">
-      @include('html/_header.html') @include('html/_hero-about.html')
-      <main class="main">@include('html/_about-page.html')</main>
-      @include('html/_footer.html')
-    </div>
+@include('html/_head.html', { "title":"Difa - Cine suntem" })
 
-    <!-- подключение скриптов -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+<body>
+  <div class="wrapper">
+    @include('html/v2/_header.html') @include('html/_hero-about.html')
+    <main class="main">@include('html/_about-page.html')</main>
+    @include('html/_footer.html')
+  </div>
+
+  <!-- подключение скриптов -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
