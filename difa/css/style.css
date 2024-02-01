@@ -616,7 +616,7 @@ input {
   }
   .menu__body._active .sub-menu li:not(:last-child) {
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-left: 20px;
   }
   .menu__body._active .sub-menu li {
     margin-bottom: 0;
@@ -661,6 +661,7 @@ input {
 }
 .sub-menu li:not(:last-child) {
   margin-bottom: 5px;
+  margin-right: 5px;
 }
 .sub-menu li a {
   color: #ffffff;
@@ -2377,12 +2378,6 @@ input {
   .footer__adress {
     width: 100%;
     margin-bottom: 28px;
-  }
-}
-@media (max-width: 840px) {
-  .page-hero--mobilier,
-.page-hero--arhitectura {
-    padding-top: 220px;
   }
 }
 @media (max-width: 768px) {
