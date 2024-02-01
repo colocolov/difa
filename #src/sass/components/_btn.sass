@@ -5,18 +5,34 @@
   cursor: pointer
   outline: none
 
-.btn
+.button
   // align-self: center // если кнпка находится во flex-контейнере и нужно выровнять ее по середине
+  position: relative
   display: inline-block
-  background: $bgc
-  border-radius: 20px
-  // border: 2px solid $green
-  padding: 10px 32px
-  color: $white
-  @include font(700, 16, 2)
-  text-align: center
+  padding: 18px 44px 18px 32px
+  font-family: 'Gilroy', sans-serif
+  @include font(800, 20, 20)
+  letter-spacing: 0.03em
   text-transform: uppercase
+  color: $black
+  background: $orange
+  border-radius: 100px
+
+  // border: 2px solid $green
+  text-align: center
   transition: background 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    right: 24px
+    width: 12px
+    height: 16px
+    transform: translateY(-50%)
+    background-image: url(../images/icons/sprite.svg#arrow-btn)
+    background-position: 0 0
+    background-repeat: no-repeat
+    transition: right 0.3s linear
   &:focus
     outline: none
     // background: $gradient-dark
@@ -27,9 +43,9 @@
     // color: $white
   @media (any-hover: hover)
     &:hover
-      transform: translateY(-4px)
+      // transform: translateY(-4px)
       background-color: transparent
-      color: $white
+      // color: $white
 
 
 // стрелки слайдера
