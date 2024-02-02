@@ -7,11 +7,12 @@
     font-weight: 500
     color: $black
     font-size: 18px
-    &:not(:first-child)
-      margin-left: 50px
+    &:not(:last-child)
+      margin-right: 50px
     @include mediaTablet
       &.footer__item
         margin-left: 50px
+        margin-right: 0
   &__icon
     width: 25px
     height: 25px

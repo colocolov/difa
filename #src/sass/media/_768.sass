@@ -1,4 +1,4 @@
-@media ( max-width:768px )
+@include mediaPhone
 
   body
     font-size: 18px
@@ -41,8 +41,10 @@
     margin-left: 3px
     margin-bottom: 10px
     &:not(:last-child)
-      order: 1
+      // order: 2
       margin-left: 3px
+    &:last-child
+      // order: 1
   .menu__item.menu__arrow
   .sub-menu
     display: flex
@@ -273,8 +275,6 @@
   .contact__location
     height: 450px
 
-  .page-about__item-left
-    margin-right: 45px
   .page-about__content p,
   .page-about__item-right p
     font-size: 18px

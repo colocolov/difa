@@ -8,7 +8,7 @@
   &__body
     display: flex
     margin-top: 0
-    @media (max-width: 768px)
+    @include mediaPhone
       position: fixed
       display: block
       top: 0
@@ -39,7 +39,7 @@
     @include fl-all
     flex-wrap: wrap
     padding-right: 10px
-    @media (max-width: 768px)
+    @include mediaPhone
       flex-direction: column
       align-items: flex-end
       padding-right: 0
@@ -68,14 +68,14 @@
           visibility: visible
           pointer-events: auto
           transform: translate(0px, 0px)
-    @media (min-width: 768px)
+    @media (min-width: $mobile)
       &._hover
         .sub-menu
           opacity: 1
           visibility: visible
           pointer-events: auto
           transform: translate(0px, 0px)
-    @media (max-width: 768px)
+    @include mediaPhone
       margin-bottom: 40px
       font-weight: 400
       font-size: 22px
@@ -100,12 +100,12 @@
     outline: none
     transition: all 0.3s ease-in-out
     transform: rotate(0deg)
-    @media (max-width: 768px)
+    @include mediaPhone
       display: none
 
   &__icon
     display: none
-    @media ( max-width: 768px )
+    @include mediaPhone
       position: relative
       display: block
       // top: 18px
@@ -145,7 +145,7 @@
           top: calc( 50% - 3px )
           transform: rotate(45deg)
 
-@media (min-width: 768px)
+@media (min-width: $mobile)
   .menu__arrow:hover::after
     transform: rotate(-180deg)
   ._hover.menu__arrow::after
@@ -155,7 +155,7 @@
     transform: rotate(-180deg)
   .menu__arrow:hover::after
     color: $orange
-@media screen and (max-width: 768px)
+@include mediaPhone
   .menu__body._active
     & .menu__arrow .menu__link
       display: none
@@ -165,7 +165,7 @@
       padding-right: 0
       justify-content: flex-end
       z-index: 0
-      li:not(:last-child)
+      li:last-child
         margin-bottom: 0
         margin-left: 20px
       li
@@ -180,7 +180,7 @@
   padding: 15px
   background-color: $orange
   z-index: 2
-  @media ( min-width: 768px )
+  @media ( min-width: $mobile )
     position: absolute
     left: -17px
     top: 100%
@@ -190,7 +190,7 @@
     transform: translate(0px, 10px)
     pointer-events: none
     transition: all 0.3s ease-in-out
-  @media ( max-width: 768px )
+  @include mediaPhone
     position: relative
     background-color: transparent
     // margin-top: 20px
@@ -209,7 +209,7 @@
       color: $white
       &:hover
         text-decoration: underline
-    @media ( max-width: 768px )
+    @include mediaPhone
       font-weight: 700
       &:not(:last-child)
         margin-bottom: 10px

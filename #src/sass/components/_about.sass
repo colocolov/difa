@@ -116,8 +116,13 @@
     justify-content: space-between
     &:not(:last-child)
       margin-bottom: 130px
+    @include mediaPhone
+      &:not(:last-child)
+        margin-bottom: 50px
     &-right
       width: 700px
+      @include mediaTablet
+        width: 100%
       p
         font-weight: 400
         font-size: 26px
@@ -134,5 +139,15 @@
         background-color: $orange
         width: 100%
         margin-top: 15px
+    &-left
+      @include mediaTablet
+        margin-right: 70px
+        flex-shrink: 0
+        min-width: 210px
+      @include mediaPhone
+      margin: 0 auto
+      margin-bottom: 10px
+      margin-right: 45px
+
 
 
