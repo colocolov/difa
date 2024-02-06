@@ -360,7 +360,7 @@ input {
     color: #fbb03b;
   }
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1200px) {
   .header__link--phone {
     margin-left: auto;
     margin-bottom: 10px;
@@ -374,7 +374,7 @@ input {
   align-items: center;
   justify-content: flex-end;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1200px) {
   .header__social {
     order: 3;
   }
@@ -461,7 +461,6 @@ input {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-right: 10px;
 }
 @media screen and (max-width: 768.98px) {
   .menu__list {
@@ -486,12 +485,25 @@ input {
   color: #2F2F2F;
   transition: color 0.3s ease-in-out;
 }
-.menu__item:not(:last-child) {
-  margin-right: 50px;
+.menu__item:not(:first-child) {
+  margin-left: 50px;
 }
 @media screen and (max-width: 1100px) {
-  .menu__item:not(:last-child) {
-    margin-right: 30px;
+  .menu__item:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .menu__item {
+    order: 2;
+  }
+}
+.menu__item.wpml-ls-item {
+  margin-right: 10px;
+}
+@media screen and (max-width: 991.98px) {
+  .menu__item.wpml-ls-item {
+    justify-content: flex-end;
   }
 }
 @media (any-hover: hover) {
@@ -883,6 +895,11 @@ input {
 }
 .social__item:not(:last-child) {
   margin-right: 50px;
+}
+@media screen and (max-width: 479.98px) {
+  .social__item:not(:last-child) {
+    margin-right: 35px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .social__item.footer__item {

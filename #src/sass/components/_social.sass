@@ -9,6 +9,8 @@
     font-size: 18px
     &:not(:last-child)
       margin-right: 50px
+      @include mediaPhoneSm
+        margin-right: 35px
     @include mediaTablet
       &.footer__item
         margin-left: 50px
